@@ -41,7 +41,6 @@ const LandingPage: React.FC = () => {
             <hr className="border-t border-gray-300 mt-2 mb-1.5 max-w-[80%] mx-auto" />
             <ul className="list-disc ml-5 text-gray-600 mt-2 space-y-1 text-left">
               <li>Served as a teaching assistant (monitor) for Data Structures & Algorithms (C++).</li>
-              <li>Participated in competitive programming contests, winning 1st place at INOVA (Telebrasil).</li>
             </ul>
           </div>
 
@@ -53,7 +52,7 @@ const LandingPage: React.FC = () => {
             </p>
             <hr className="border-t border-gray-300 mt-2 mb-1.5 max-w-[80%] mx-auto" />
             <ul className="list-disc ml-5 text-gray-600 mt-2 space-y-1 text-left">
-              <li>Research internship at LIS-LAB (TALEP), supervised by Benoît Favre, working on HuBERT-based speech recognition and feature extraction.</li>
+              <li>Paid Research internship at LIS-LAB (TALEP), supervised by Prof. <a href="https://pageperso.lis-lab.fr/benoit.favre/" className="underline text-blue-600 hover:text-blue-800">Benoît Favre</a>, working on HuBERT-based speech recognition and feature extraction.</li>
               <li>6-month internship at Euranova, developing a sustainable AI methodology and applying it to a LangChain RAG project to optimize resource efficiency.</li>
               <li>Worked part-time as a student assistant supporting peers with special needs.</li>
             </ul>
@@ -63,7 +62,7 @@ const LandingPage: React.FC = () => {
           <div className="p-4 border-l-4 border-blue-500 bg-blue-50 shadow-sm rounded-md">
             <h3 className="font-bold">2024 – 2025 · Bachelor’s Final Project</h3>
             <p className="text-gray-600">
-              Applied Deep Embedded Clustering (DEC) and Natural Language Processing (NLP) to group and analyze Brazilian government expenditure data.
+              Applied Deep Embedded Clustering (DEC) and Natural Language Processing (NLP) to group and analyze Brazilian government expenditure data, supervised by Prof. <a href="https://eic.cefet-rj.br/~ebezerra/" className="underline text-blue-600 hover:text-blue-800">Eduardo Bezerra</a>.
             </p>
             <hr className="border-t border-gray-300 mt-2 mb-1.5 max-w-[80%] mx-auto" />
             <p className="text-gray-600 mt-2 text-left">
@@ -79,7 +78,7 @@ const LandingPage: React.FC = () => {
             </p>
             <hr className="border-t border-gray-300 mt-2 mb-1.5 max-w-[80%] mx-auto" />
             <ul className="list-disc ml-5 text-gray-600 mt-2 space-y-1 text-left">
-              <li>Implemented NLP-driven embedding and clustering to detect suspicious spending patterns.</li>
+              <li>Grouping government expenditures embeddings based on their similarity score to detect suspicious spending patterns.</li>
               <li>Won the national INOVA contest (Telebrasil) for innovative technological solutions.</li>
             </ul>
             </div>
