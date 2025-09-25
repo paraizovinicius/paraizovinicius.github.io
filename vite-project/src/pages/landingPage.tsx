@@ -1,5 +1,4 @@
 import React from "react";
-import eu from "../assets/eu.png";
 import { Mail } from "lucide-react";
 
 
@@ -9,7 +8,7 @@ const LandingPage: React.FC = () => {
       {/* Hero Section */}
     <section className="flex flex-col items-center justify-center mt-10 md:mt-0 py-8 px-6 text-center bg-gradient-to-r from-gray-100 to-blue-100">
       <div>
-        <img src={eu} alt="EU" className="w-40 h-auto rounded-full" />
+        <img src={"../assets/eu.png"} alt="EU" className="w-40 h-auto rounded-full" />
       </div>
       <h1 className="text-4xl font-bold mb-2">Vinicius Paraizo</h1>
       <div className="text-lg text-gray-700 max-w-xl mt-4">
