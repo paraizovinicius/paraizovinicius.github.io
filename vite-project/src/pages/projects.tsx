@@ -23,7 +23,7 @@ const projects = [
 const Projects: React.FC = () => {
     return (
 
-        <div className="min-h-screen max-w-3xl mx-auto bg-gray-50 text-gray-800 py-12 px-6">
+        <div className="min-h-screen max-w-3xl mx-auto bg-gray-50 text-gray-800 py-12 px-6 mt-8 md:mt-0">
             <h1 className="text-4xl font-bold mb-8 text-center">Projects</h1>
             <div className="max-w-4xl mx-auto grid gap-8 md:grid-cols-2"></div>
                 {projects.map((project) => (

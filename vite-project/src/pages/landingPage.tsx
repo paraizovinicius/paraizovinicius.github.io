@@ -1,4 +1,5 @@
 import React from "react";
+import eu from "../assets/eu.png";
 import { Mail } from "lucide-react";
 
 
@@ -8,7 +9,7 @@ const LandingPage: React.FC = () => {
       {/* Hero Section */}
     <section className="flex flex-col items-center justify-center mt-10 md:mt-0 py-8 px-6 text-center bg-gradient-to-r from-gray-100 to-blue-100">
       <div>
-        <img src={"../assets/eu.png"} alt="EU" className="w-40 h-auto rounded-full" />
+        <img src={eu} alt="EU" className="w-40 h-auto rounded-full" />
       </div>
       <h1 className="text-4xl font-bold mb-2">Vinicius Paraizo</h1>
       <div className="text-lg text-gray-700 max-w-xl mt-4">
@@ -31,64 +32,70 @@ const LandingPage: React.FC = () => {
 
         <div className="space-y-6">
 
-          {/* 2019 */}
+          {/* CEFET */}
           <div className="p-4 border-l-4 border-orange-500 bg-orange-50 shadow-sm rounded-md">
-            <h3 className="font-bold">2019 – Started Computer Science BSc</h3>
+            <h3 className="font-bold">2019 – 2025 · Computer Science BSc @ CEFET</h3>
             <p className="text-gray-600">
-              Enrolled at CEFET, where I built strong foundations in algorithms, data
-              structures, and software engineering. Participated in competitive
-              programming and earned 1st place at INOVA (Telebrasil) for innovative
-              tech solutions.
+              Built strong foundations in algorithms, data structures, and software engineering.
             </p>
+            <hr className="border-t border-gray-300 mt-2 mb-1.5 max-w-[80%] mx-auto" />
+            <ul className="list-disc ml-5 text-gray-600 mt-2 space-y-1 text-left">
+              <li>Served as a teaching assistant (monitor) for Data Structures & Algorithms (C++).</li>
+              <li>Participated in competitive programming contests, winning 1st place at INOVA (Telebrasil).</li>
+            </ul>
           </div>
 
-          {/* 2022 */}
+          {/* AIX-MARSEILLE */}
           <div className="p-4 border-l-4 border-pink-500 bg-pink-50 shadow-sm rounded-md">
-            <h3 className="font-bold">2022 – Procurement Systems Analyst @ VTEX</h3>
+            <h3 className="font-bold">2023 – 2024 · Master 1 (Exchange) @ Aix-Marseille University</h3>
             <p className="text-gray-600">
-              Maintained and improved procurement systems, automated internal
-              processes with Python (Selenium + OpenPyXL), and collaborated closely
-              with stakeholders to streamline operations.
+              Deepened my skills in Data Science, AI, and applied research while living in France.
             </p>
+            <hr className="border-t border-gray-300 mt-2 mb-1.5 max-w-[80%] mx-auto" />
+            <ul className="list-disc ml-5 text-gray-600 mt-2 space-y-1 text-left">
+              <li>Research internship at LIS-LAB (TALEP), supervised by Benoît Favre, working on HuBERT-based speech recognition and feature extraction.</li>
+              <li>6-month internship at Euranova, developing a sustainable AI methodology and applying it to a LangChain RAG project to optimize resource efficiency.</li>
+              <li>Worked part-time as a student assistant supporting peers with special needs.</li>
+            </ul>
           </div>
 
-          {/* 2024 – Research */}
-          <div className="p-4 border-l-4 border-purple-500 bg-purple-50 shadow-sm rounded-md">
-            <h3 className="font-bold">2024 – International Research & Applied AI</h3>
-            <p className="text-gray-600">
-              Conducted research in France at TALEP using HuBERT for speech
-              recognition and feature extraction. Later, at Euranova, developed a
-              methodology to improve AI lifecycle efficiency and applied it to a
-              LangChain RAG project to reduce computational footprint.
-            </p>
-          </div>
-
-          {/* 2025 – Professional Work + Academic Milestones */}
+          {/* Final Year Project */}
           <div className="p-4 border-l-4 border-blue-500 bg-blue-50 shadow-sm rounded-md">
-            <h3 className="font-bold">2025 – Web Developer & Final Year Projects</h3>
+            <h3 className="font-bold">2024 – 2025 · Bachelor’s Final Project</h3>
             <p className="text-gray-600">
-              Joined Anouk Partners, working on an integrated project with a Next.js
-              frontend and Java Spring backend. Contributed to database integrations
-              and frontend optimization in an agile team. Completed my Bachelor’s
-              final project applying Deep Embedded Clustering (DEC) to detect
-              anomalies in government expenditure data (graded with maximum score).
+              Applied Deep Embedded Clustering (DEC) and Natural Language Processing (NLP) to group and analyze Brazilian government expenditure data.
+            </p>
+            <hr className="border-t border-gray-300 mt-2 mb-1.5 max-w-[80%] mx-auto" />
+            <p className="text-gray-600 mt-2 text-left">
+              <strong>Result:</strong> Project graded with highest honors for its innovative approach to anomaly detection and data auditing.
             </p>
           </div>
 
-          {/* Current work */}
-          <div className="p-4 border-l-4 border-green-500 bg-green-50 shadow-sm rounded-md">
-            <h3 className="font-bold">Now – Research Paper in Progress</h3>
+          {/* Project Nemesis */}
+            <div className="p-4 border-l-4 border-red-500 bg-red-50 shadow-sm rounded-md">
+            <h3 className="font-bold">Project <i>Nemesis</i></h3>
             <p className="text-gray-600">
-              Working on a comparative study of clustering algorithms (SDEC, DEC,
-              K-Means, Spectral Clustering) applied to genetic data for cancer
-              prediction. Building ablation pipelines with PCA and data scaling to
-              evaluate performance and reproducibility.
+              Developed a web-based auditing platform for the government of Rio de Janeiro.
+            </p>
+            <hr className="border-t border-gray-300 mt-2 mb-1.5 max-w-[80%] mx-auto" />
+            <ul className="list-disc ml-5 text-gray-600 mt-2 space-y-1 text-left">
+              <li>Implemented NLP-driven embedding and clustering to detect suspicious spending patterns.</li>
+              <li>Won the national INOVA contest (Telebrasil) for innovative technological solutions.</li>
+            </ul>
+            </div>
+
+          {/* Current Research */}
+          <div className="p-4 border-l-4 border-green-500 bg-green-50 shadow-sm rounded-md">
+            <h3 className="font-bold">2025 – Present · Research Paper in Progress</h3>
+            <p className="text-gray-600">
+              Leading a comparative study of clustering algorithms (SDEC, DEC, K-Means, Spectral Clustering) applied to genetic data for cancer prediction. Building ablation pipelines with PCA and scalers to evaluate reproducibility and performance.
             </p>
           </div>
 
         </div>
       </div>
     </section>
+
 
 
     </div>
