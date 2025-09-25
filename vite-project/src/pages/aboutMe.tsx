@@ -1,5 +1,4 @@
 import React from "react";
-import eu from "../assets/eu.png";
 
 const AboutMe: React.FC = () => {
     return (
