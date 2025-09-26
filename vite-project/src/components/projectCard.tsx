@@ -3,7 +3,6 @@ import { Github, ExternalLink } from "lucide-react";
 import { useState, useEffect } from "react";
 
 // Import Nemesis images
-import telebrasil1 from "../assets/nemesis/telebrasil1.jpg";
 import telebrasil2 from "../assets/nemesis/telebrasil2.jpg";
 import telebrasil3 from "../assets/nemesis/telebrasil3.jpg";
 import telebrasil6 from "../assets/nemesis/telebrasil6.jpg";
@@ -22,7 +21,6 @@ interface ProjectCardProps {
 }
 
 const nemesisImages = [
-  telebrasil1,
   telebrasil3,
   telebrasil6,
   app1,
@@ -64,7 +62,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tech, git
                     className="flex items-center gap-1 text-gray-600 hover:text-black transition-colors duration-200"
                 >
                     <Github size={18} />
-                    GitHub
+                    GitHub <ExternalLink className="w-4 h-4" />
                 </a>
                 {demo && (
                     <a

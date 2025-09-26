@@ -54,7 +54,7 @@ const LandingPage: React.FC = () => {
             <hr className="border-t border-gray-300 mt-2 mb-1.5 max-w-[80%] mx-auto" />
             <ul className="list-disc ml-5 text-gray-600 mt-2 space-y-1 text-left">
               <li>Paid Research internship at LIS-LAB (TALEP), supervised by Prof. <a href="https://pageperso.lis-lab.fr/benoit.favre/" className="underline text-blue-600 hover:text-blue-800">Benoît Favre</a>, working on HuBERT-based speech recognition and feature extraction.</li>
-              <li>6-month internship at Euranova, developing a sustainable AI methodology and applying it to a LangChain RAG project to optimize resource efficiency.</li>
+              <li>6-month paid internship at Euranova, developing a sustainable AI methodology and applying it to a LangChain RAG project to optimize resource efficiency.</li>
               <li>Worked part-time as a student assistant supporting peers with special needs.</li>
             </ul>
           </div>
