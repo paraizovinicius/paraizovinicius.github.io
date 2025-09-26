@@ -1,7 +1,8 @@
 import React from "react";
 import eu from "../assets/eu.png";
-import { Mail } from "lucide-react";
+import { Mail, ExternalLink } from "lucide-react";
 
+// TODO: idiomas diferentes
 
 const LandingPage: React.FC = () => {
   return (
@@ -14,7 +15,7 @@ const LandingPage: React.FC = () => {
       <h1 className="text-4xl font-bold mb-2">Vinicius Paraizo</h1>
       <div className="text-lg text-gray-700 max-w-xl mt-4">
         <span className="text-xl font-bold">Hello there !</span> I am a Computer Sciences student who will graduate at the end of 2025. Most recently, in 2024, I did a Master's exchange program at Aix-Marseille University. 
-        My final project thesis is entitled "Fiscalização de Compras Públicas: Uma Abordagem com Processamento de Linguagem Natural". You can find that manuscript <a href="#" className="underline text-blue-600 hover:text-blue-800">here</a>.
+        My final project thesis is entitled "Audit of Government Spending: An approach using Natural Language Processing". You can find the manuscript <a href="#" className="underline text-blue-600 hover:text-blue-800">here</a>.
       </div>
       <div className="mt-4 flex items-center gap-2">
         <Mail className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
@@ -66,13 +67,26 @@ const LandingPage: React.FC = () => {
             </p>
             <hr className="border-t border-gray-300 mt-2 mb-1.5 max-w-[80%] mx-auto" />
             <p className="text-gray-600 mt-2 text-left">
-              <strong>Result:</strong> Project graded with highest honors for its innovative approach to anomaly detection and data auditing.
+              <strong>Result:</strong> Earned highest honors for successfully tackling complex, real-world expenditure data and demonstrating the algorithm’s strong performance.
             </p>
           </div>
 
           {/* Project Nemesis */}
             <div className="p-4 border-l-4 border-red-500 bg-red-50 shadow-sm rounded-md">
-            <h3 className="font-bold">Project <i>Nemesis</i></h3>
+              <div className="flex items-center gap-2 mx-auto justify-center">
+                <h3 className="font-bold">Project <i>Nemesis</i></h3>
+                <a 
+                  href="https://www.correiobraziliense.com.br/euestudante/educacao-profissional/2025/09/7240957-projetos-focados-em-inovacao-e-tecnologia-sao-premiados-em-brasilia.html" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-red-600 hover:text-red-800 transition-colors duration-200"
+                  title="Open project details in new tab"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+            
+            
             <p className="text-gray-600">
               Developed a web-based auditing platform for the government of Rio de Janeiro.
             </p>
