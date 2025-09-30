@@ -5,7 +5,7 @@ const AboutMe: React.FC = () => {
         <div className="min-h-screen bg-gray-50 text-gray-800 mt-8 md:mt-0 ">
             {/* About Me */}
             <section className="max-w-3xl mx-auto py-12 px-6 space-y-6">
-                <h2 className="text-2xl font-semibold mb-4">About Me</h2>
+                <h1 className="text-4xl font-bold mb-8 text-center">About me</h1>
                 <p className="text-gray-600 leading-relaxed">
                     I am a curious and impact-driven AI engineer with hands-on experience in LLMs, 
                     RAG pipelines, and scalable ML systems.

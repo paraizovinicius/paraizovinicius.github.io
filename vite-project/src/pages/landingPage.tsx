@@ -1,7 +1,9 @@
 import React from "react";
 import eu from "../assets/eu.png";
 import { Mail, ExternalLink } from "lucide-react";
+import { siLinkerd } from "simple-icons"
 import tese from "../assets/TCC_2024_ViniciusParaizo.pdf"
+import cv from "../assets/CV - Vinicius Paraizo.pdf"
 
 // TODO: idiomas diferentes
 
@@ -27,9 +29,30 @@ const LandingPage: React.FC = () => {
           here
         </a>.
       </div>
-      <div className="mt-4 flex items-center gap-2">
-        <Mail className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
-        <span className="text-gray-700">paraizovinicius@gmail.com</span>
+      <div className="mt-4 flex items-center gap-8">
+        <div className="flex items-center gap-1">
+          <Mail className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+          <span className="text-gray-700">paraizovinicius@gmail.com</span>
+        </div>
+
+        <div className="flex items-center gap-1">
+          <span className="text-[#676FFF] text-[18px] font-bold w-5 h-6 fill-current group-hover:scale-110 transition-transform duration-200">in</span>
+          <a href="https://www.linkedin.com/in/paraizovinicius/" className="underline text-blue-600 hover:text-blue-800">LinkedIn</a>
+        </div>
+
+        <div className="flex items-center gap-1">
+          <a
+          href={cv}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline text-blue-600 hover:text-blue-800"
+          >
+          CV<span className="text-[10px]">[pdf]</span>
+          </a>.
+        </div>
+        <div>
+
+        </div>
       </div>
       
     </section>

@@ -1,5 +1,7 @@
 import React from 'react';
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail } from "lucide-react";
+import { siGithub } from "simple-icons"
+import { SocialIcon } from 'react-social-icons'
 
 const Footer: React.FC = () => (
     <footer className="w-full bg-gray-900 text-white mt-auto">
@@ -21,7 +23,15 @@ const Footer: React.FC = () => (
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 text-gray-300 hover:text-orange-400 transition-colors duration-200 group"
                     >
-                        <Github className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" /> 
+                        <svg
+                        role="img"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-5 h-5 fill-current group-hover:scale-110 transition-transform duration-200"
+                        >
+                        <title>{siGithub.title}</title>
+                        <path d={siGithub.path} />
+                        </svg>
                         <span>GitHub</span>
                     </a>
                     <a
@@ -30,7 +40,7 @@ const Footer: React.FC = () => (
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 text-gray-300 hover:text-orange-400 transition-colors duration-200 group"
                     >
-                        <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" /> 
+                        <span className="text-[#676FFF] text-[18px] font-bold w-5 h-6 fill-current group-hover:scale-110 transition-transform duration-200">in</span> 
                         <span>LinkedIn</span>
                     </a>
                 </div>
