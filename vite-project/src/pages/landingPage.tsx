@@ -1,6 +1,7 @@
 import React from "react";
 import eu from "../assets/eu.png";
 import { Mail, ExternalLink } from "lucide-react";
+import tese from "../assets/TCC_2024_ViniciusParaizo.pdf"
 
 // TODO: idiomas diferentes
 
@@ -15,7 +16,16 @@ const LandingPage: React.FC = () => {
       <h1 className="text-4xl font-bold mb-2">Vinicius Paraizo</h1>
       <div className="text-lg text-gray-700 max-w-xl mt-4">
         <span className="text-xl font-bold">Hello there !</span> I am a Computer Sciences student who will graduate at the end of 2025. Most recently, in 2024, I did a Master's exchange program at Aix-Marseille University. 
-        My final project thesis is entitled "Audit of Government Spending: An approach using Natural Language Processing". You can find the manuscript <a href="#" className="underline text-blue-600 hover:text-blue-800">here</a>.
+        My final project thesis is entitled <em>"Audit of Government Spending: An approach using Natural Language Processing"</em>. 
+        You can find the manuscript{" "}
+        <a
+          href={tese}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline text-blue-600 hover:text-blue-800"
+        >
+          here
+        </a>.
       </div>
       <div className="mt-4 flex items-center gap-2">
         <Mail className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
@@ -47,7 +57,7 @@ const LandingPage: React.FC = () => {
 
           {/* AIX-MARSEILLE */}
           <div className="p-4 border-l-4 border-pink-500 bg-pink-50 shadow-sm rounded-md">
-            <h3 className="font-bold">2023 – 2024 · Master 1 (Exchange) @ Aix-Marseille University</h3>
+            <h3 className="font-bold">2023 – 2024 · Master (Exchange) @ Aix-Marseille University</h3>
             <p className="text-gray-600">
               Deepened my skills in Data Science, AI, and applied research while living in France.
             </p>
@@ -72,18 +82,32 @@ const LandingPage: React.FC = () => {
           </div>
 
           {/* Project Nemesis */}
+          
             <div className="p-4 border-l-4 border-red-500 bg-red-50 shadow-sm rounded-md">
               <div className="flex items-center gap-2 mx-auto justify-center">
                 <h3 className="font-bold">Project <i>Nemesis</i></h3>
+                <div className="flex gap-4">
                 <a 
                   href="https://www.correiobraziliense.com.br/euestudante/educacao-profissional/2025/09/7240957-projetos-focados-em-inovacao-e-tecnologia-sao-premiados-em-brasilia.html" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-red-600 hover:text-red-800 transition-colors duration-200"
+                  className="flex items-center text-[10px] gap-1 text-red-600 hover:text-red-800 transition-colors duration-200"
                   title="Open project details in new tab"
                 >
+                  (correio braziliense)
                   <ExternalLink className="w-4 h-4" />
                 </a>
+                <a
+                  href="https://oglobo.globo.com/google/amp/rio/bairros/tijuca-e-zona-norte/noticia/2025/09/29/com-software-que-promete-revolucionar-fiscalizacao-do-tce-alunos-e-professores-do-cefet-ganham-premio-nacional.ghtml"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-[10px] gap-1 text-red-600 hover:text-red-800 transition-colors duration-200"
+                  title="Open project details in new tab"
+                >
+                  (oglobo)
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+                </div>
               </div>
             
             
