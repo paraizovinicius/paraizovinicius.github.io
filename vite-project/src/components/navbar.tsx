@@ -40,21 +40,30 @@ export default function Navbar() {
       <div className="flex flex-row md:flex-col md:w-full w-auto md:space-y-20 space-x-4 md:space-x-0 md:h-full">
         <span
           className="text-white text-md md:text-lg py-1 px-2 md:px-4 hover:underline hover:text-orange-300 cursor-pointer"
-          onClick={() => navigate("/")}
+          onClick={() => {
+            navigate("/");
+            window.scrollTo(0, 0);
+          }}
         >
           Home
         </span>
 
         <span
           className="text-white text-md md:text-lg py-1 px-2 md:px-4 hover:underline hover:text-orange-300 cursor-pointer"
-          onClick={() => navigate("/AboutMe")}
+          onClick={() => {
+            navigate("/AboutMe");
+            window.scrollTo(0, 0);
+          }}
         >
           About Me
         </span>
 
         <span
           className="text-white text-md md:text-lg py-1 px-2 md:px-4 hover:underline hover:text-orange-300 cursor-pointer"
-          onClick={() => navigate("/Projects")}
+          onClick={() => {
+            navigate("/Projects");
+            window.scrollTo(0, 0);
+          }}
         >
           Projects
         </span>
