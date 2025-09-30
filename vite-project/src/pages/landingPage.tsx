@@ -35,8 +35,10 @@ const LandingPage: React.FC = () => {
         </div>
 
         <div className="flex items-center gap-1">
+          <a href="https://www.linkedin.com/in/paraizovinicius/" className="underline text-blue-600 hover:text-blue-800">
           <span className="text-[#676FFF] text-[18px] font-bold w-5 h-6 fill-current group-hover:scale-110 transition-transform duration-200">in</span>
-          <a href="https://www.linkedin.com/in/paraizovinicius/" className="underline text-blue-600 hover:text-blue-800">LinkedIn</a>
+          LinkedIn
+          </a>
         </div>
 
         <div className="flex items-center gap-1">

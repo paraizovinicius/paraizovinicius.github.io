@@ -1,5 +1,6 @@
 import React from "react";
-import { Github, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { siGithub } from "simple-icons"
 import { useState, useEffect } from "react";
 
 // Import Nemesis images
@@ -61,7 +62,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tech, git
                     rel="noopener noreferrer"
                     className="flex items-center gap-1 text-gray-600 hover:text-black transition-colors duration-200"
                 >
-                    <Github size={18} />
+                    <svg
+                        role="img"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-5 h-5 fill-current group-hover:scale-110 transition-transform duration-200"
+                        >
+                        <title>{siGithub.title}</title>
+                        <path d={siGithub.path} />
+                    </svg>
                     GitHub <ExternalLink className="w-4 h-4" />
                 </a>
                 {demo && (
