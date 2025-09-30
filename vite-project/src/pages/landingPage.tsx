@@ -37,12 +37,17 @@ const LandingPage: React.FC = () => {
 
         {/* LinkedIn and CV - Side by side on mobile, continue row on desktop */}
         <div className="flex flex-row gap-4 md:gap-8 justify-center">
-          <div className="flex items-center gap-1">
-            <a href="https://www.linkedin.com/in/paraizovinicius/" className="underline text-blue-600 hover:text-blue-800">
-            <span className="text-[#676FFF] text-[18px] font-bold w-5 h-6 fill-current group-hover:scale-110 transition-transform duration-200">in</span>
-            LinkedIn
+            <div className="flex items-center gap-2">
+            <a
+              href="https://www.linkedin.com/in/paraizovinicius/"
+              className="underline text-blue-600 hover:text-blue-800 flex items-center gap-1"
+            >
+              <span className="text-[#676FFF] text-[18px] font-bold w-5 h-6 fill-current group-hover:scale-110 transition-transform duration-200">
+              in
+              </span>
+              LinkedIn
             </a>
-          </div>
+            </div>
 
           <div className="flex items-center gap-1">
             <a
