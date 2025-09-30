@@ -16,74 +16,87 @@ const AboutMe: React.FC = () => {
                 <hr className="border-t border-gray-300 mt-2 mb-1.5 max-w-[80%] mx-auto mb-8" />
                 
                 {/* Quick Summary Navigation */}
-                <div className="bg-white rounded-lg shadow-md p-1 mb-8">
-                    {/* <h2 className="text-2xl font-bold mb-4 text-center">Quick Summary</h2> */}
-                    <div className="grid grid-cols-1 md:grid-cols-2">
-                        <button
-                            onClick={() => scrollToSection('identity')}
-                            className="text-left p-3 rounded-md bg-blue-50 hover:bg-blue-100 transition-colors border border-blue-200 hover:border-blue-300"
-                        >
-                            <span className="font-semibold text-blue-700">Identity</span>
-                            {/* <p className="text-sm text-gray-600 mt-1">My personal approach to learning and growth</p> */}
-                        </button>
-                        <button
-                            onClick={() => scrollToSection('academic-beginnings')}
-                            className="text-left p-3 rounded-md bg-green-50 hover:bg-green-100 transition-colors border border-green-200 hover:border-green-300"
-                        >
-                            <span className="font-semibold text-green-700">Academic Beginnings</span>
-                            {/* <p className="text-sm text-gray-600 mt-1">Dual studies and time management</p> */}
-                        </button>
-                        <button
-                            onClick={() => scrollToSection('commitment-growth')}
-                            className="text-left p-3 rounded-md bg-purple-50 hover:bg-purple-100 transition-colors border border-purple-200 hover:border-purple-300"
-                        >
-                            <span className="font-semibold text-purple-700">Commitment to Growth</span>
-                            {/* <p className="text-sm text-gray-600 mt-1">Overcoming challenges and tutoring experience</p> */}
-                        </button>
-                        <button
-                            onClick={() => scrollToSection('corporate-experience')}
-                            className="text-left p-3 rounded-md bg-orange-50 hover:bg-orange-100 transition-colors border border-orange-200 hover:border-orange-300"
-                        >
-                            <span className="font-semibold text-orange-700">Corporate Experience</span>
-                            {/* <p className="text-sm text-gray-600 mt-1">VTEX internship and automation project</p> */}
-                        </button>
-                        <button
-                            onClick={() => scrollToSection('academic-exchange')}
-                            className="text-left p-3 rounded-md bg-indigo-50 hover:bg-indigo-100 transition-colors border border-indigo-200 hover:border-indigo-300"
-                        >
-                            <span className="font-semibold text-indigo-700">Academic Exchange</span>
-                            {/* <p className="text-sm text-gray-600 mt-1">France experience and first research contact</p> */}
-                        </button>
-                        <button
-                            onClick={() => scrollToSection('applied-research')}
-                            className="text-left p-3 rounded-md bg-red-50 hover:bg-red-100 transition-colors border border-red-200 hover:border-red-300"
-                        >
-                            <span className="font-semibold text-red-700">Applied Research</span>
-                            {/* <p className="text-sm text-gray-600 mt-1">P&D Euranova internship and AI research</p> */}
-                        </button>
-                        <button
-                            onClick={() => scrollToSection('course-conclusion')}
-                            className="text-left p-3 rounded-md bg-teal-50 hover:bg-teal-100 transition-colors border border-teal-200 hover:border-teal-300"
-                        >
-                            <span className="font-semibold text-teal-700">Course Conclusion</span>
-                            {/* <p className="text-sm text-gray-600 mt-1">Thesis completion and academic recognition</p> */}
-                        </button>
-                        <button
-                            onClick={() => scrollToSection('professional-trajectory')}
-                            className="text-left p-3 rounded-md bg-yellow-50 hover:bg-yellow-100 transition-colors border border-yellow-200 hover:border-yellow-300"
-                        >
-                            <span className="font-semibold text-yellow-700">Professional Trajectory</span>
-                            {/* <p className="text-sm text-gray-600 mt-1">Web development and Nemesis project</p> */}
-                        </button>
-                        <button
-                            onClick={() => scrollToSection('identity-researcher')}
-                            className="text-left p-3 rounded-md bg-pink-50 hover:bg-pink-100 transition-colors border border-pink-200 hover:border-pink-300 md:col-span-2"
-                        >
-                            <span className="font-semibold text-pink-700">Identity as a Researcher</span>
-                            {/* <p className="text-sm text-gray-600 mt-1">Current perspective and future goals</p> */}
-                        </button>
+                <details className="bg-white rounded-lg shadow-md p-2 mb-8">
+                <summary className="cursor-pointer text-lg font-semibold text-gray-800 flex items-center gap-2 p-2 hover:text-blue-600">
+                    {/* You can replace this with an icon from lucide-react or heroicons */}
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                    Quick Summary
+                </summary>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-3">
+                    <div
+                    onClick={() => scrollToSection('identity')}
+                    className="cursor-pointer text-left p-3 rounded-md bg-blue-50 hover:bg-blue-100 transition-colors border border-blue-200 hover:border-blue-300"
+                    >
+                    <span className="font-semibold text-blue-700">1. Identity</span>
+                    </div>
+
+                    <div
+                    onClick={() => scrollToSection('academic-beginnings')}
+                    className="cursor-pointer text-left p-3 rounded-md bg-green-50 hover:bg-green-100 transition-colors border border-green-200 hover:border-green-300"
+                    >
+                    <span className="font-semibold text-green-700">2. Academic Beginnings</span>
+                    </div>
+
+                    <div
+                    onClick={() => scrollToSection('commitment-growth')}
+                    className="cursor-pointer text-left p-3 rounded-md bg-purple-50 hover:bg-purple-100 transition-colors border border-purple-200 hover:border-purple-300"
+                    >
+                    <span className="font-semibold text-purple-700">3. Commitment to Growth</span>
+                    </div>
+
+                    <div
+                    onClick={() => scrollToSection('corporate-experience')}
+                    className="cursor-pointer text-left p-3 rounded-md bg-orange-50 hover:bg-orange-100 transition-colors border border-orange-200 hover:border-orange-300"
+                    >
+                    <span className="font-semibold text-orange-700">4. Corporate Experience</span>
+                    </div>
+
+                    <div
+                    onClick={() => scrollToSection('academic-exchange')}
+                    className="cursor-pointer text-left p-3 rounded-md bg-indigo-50 hover:bg-indigo-100 transition-colors border border-indigo-200 hover:border-indigo-300"
+                    >
+                    <span className="font-semibold text-indigo-700">5. Academic Exchange</span>
+                    </div>
+
+                    <div
+                    onClick={() => scrollToSection('applied-research')}
+                    className="cursor-pointer text-left p-3 rounded-md bg-red-50 hover:bg-red-100 transition-colors border border-red-200 hover:border-red-300"
+                    >
+                    <span className="font-semibold text-red-700">6. Applied Research</span>
+                    </div>
+
+                    <div
+                    onClick={() => scrollToSection('course-conclusion')}
+                    className="cursor-pointer text-left p-3 rounded-md bg-teal-50 hover:bg-teal-100 transition-colors border border-teal-200 hover:border-teal-300"
+                    >
+                    <span className="font-semibold text-teal-700">7. Course Conclusion</span>
+                    </div>
+
+                    <div
+                    onClick={() => scrollToSection('professional-trajectory')}
+                    className="cursor-pointer text-left p-3 rounded-md bg-yellow-50 hover:bg-yellow-100 transition-colors border border-yellow-200 hover:border-yellow-300"
+                    >
+                    <span className="font-semibold text-yellow-700">8. Professional Trajectory</span>
+                    </div>
+
+                    <div
+                    onClick={() => scrollToSection('identity-researcher')}
+                    className="cursor-pointer text-left p-3 rounded-md bg-pink-50 hover:bg-pink-100 transition-colors border border-pink-200 hover:border-pink-300 md:col-span-2"
+                    >
+                    <span className="font-semibold text-pink-700">9. Identity as a Researcher</span>
                     </div>
                 </div>
+                </details>
+
 
                 <div id="identity">
                     <div className="font-bold text-[20px] text-left">Identity</div>

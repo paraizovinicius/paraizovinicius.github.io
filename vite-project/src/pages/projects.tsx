@@ -3,7 +3,7 @@ import ProjectCard from "../components/projectCard";
 
 const Projects: React.FC = () => {
     return (
-        <div className="min-h-screen pl-0 md:pl-22 max-w-[90%] md:max-w-[70%] mx-auto bg-gray-50 text-gray-800 py-12 px-6 mt-8 md:mt-0">
+        <div className="min-h-screen pl-0 md:pl-22 md:max-w-[70%] mx-auto bg-gray-50 text-gray-800 py-12 px-6 mt-8 md:mt-0">
             <h1 className="text-4xl font-bold mb-8 text-center">Projects</h1>
             <div className="max-w-4xl mx-auto grid gap-8 md:grid-cols-1">
                 <ProjectCard
