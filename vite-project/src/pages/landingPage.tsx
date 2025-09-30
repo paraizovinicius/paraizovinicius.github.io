@@ -1,7 +1,6 @@
 import React from "react";
 import eu from "../assets/eu.png";
 import { Mail, ExternalLink } from "lucide-react";
-import { siLinkerd } from "simple-icons"
 import tese from "../assets/TCC_2024_ViniciusParaizo.pdf"
 import cv from "../assets/CV - Vinicius Paraizo.pdf"
 

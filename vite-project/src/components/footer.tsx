@@ -1,7 +1,6 @@
 import React from 'react';
 import { Mail } from "lucide-react";
 import { siGithub } from "simple-icons"
-import { SocialIcon } from 'react-social-icons'
 
 const Footer: React.FC = () => (
     <footer className="w-full bg-gray-900 text-white mt-auto">
