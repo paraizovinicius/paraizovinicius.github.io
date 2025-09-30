@@ -28,31 +28,32 @@ const LandingPage: React.FC = () => {
           here
         </a>.
       </div>
-      <div className="mt-4 flex items-center gap-8">
-        <div className="flex items-center gap-1">
+      <div className="mt-4 flex flex-col md:flex-row md:justify-center gap-4 md:gap-8 items-center">
+        {/* Email - Full width on mobile, first item on desktop */}
+        <div className="flex items-center justify-center gap-1 w-full md:w-auto">
           <Mail className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
           <span className="text-gray-700">paraizovinicius@gmail.com</span>
         </div>
 
-        <div className="flex items-center gap-1">
-          <a href="https://www.linkedin.com/in/paraizovinicius/" className="underline text-blue-600 hover:text-blue-800">
-          <span className="text-[#676FFF] text-[18px] font-bold w-5 h-6 fill-current group-hover:scale-110 transition-transform duration-200">in</span>
-          LinkedIn
-          </a>
-        </div>
+        {/* LinkedIn and CV - Side by side on mobile, continue row on desktop */}
+        <div className="flex flex-row gap-4 md:gap-8 justify-center">
+          <div className="flex items-center gap-1">
+            <a href="https://www.linkedin.com/in/paraizovinicius/" className="underline text-blue-600 hover:text-blue-800">
+            <span className="text-[#676FFF] text-[18px] font-bold w-5 h-6 fill-current group-hover:scale-110 transition-transform duration-200">in</span>
+            LinkedIn
+            </a>
+          </div>
 
-        <div className="flex items-center gap-1">
-          <a
-          href={cv}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline text-blue-600 hover:text-blue-800"
-          >
-          CV<span className="text-[10px]">[pdf]</span>
-          </a>.
-        </div>
-        <div>
-
+          <div className="flex items-center gap-1">
+            <a
+            href={cv}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline text-blue-600 hover:text-blue-800"
+            >
+            CV<span className="text-[10px]">[pdf]</span>
+            </a>.
+          </div>
         </div>
       </div>
       
