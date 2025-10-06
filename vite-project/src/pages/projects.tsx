@@ -5,7 +5,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 const Projects: React.FC = () => {
     const { language, t } = useLanguage();
     return (
-        <div className="min-h-screen pl-0 md:pl-22 md:max-w-[70%] mx-auto bg-gray-50 text-gray-800 py-12 px-6 mt-8 md:mt-0">
+        <div className="min-h-screen pl-0 md:pl-22 md:pl-0 mx-auto bg-gray-50 text-gray-800 py-12 px-6 mt-8 md:mt-0">
             <h1 className="text-4xl font-bold mb-8 text-center">{t("projects.title")}</h1>
             <div className="max-w-4xl mx-auto grid gap-8 md:grid-cols-1 pl-4">
                 <ProjectCard

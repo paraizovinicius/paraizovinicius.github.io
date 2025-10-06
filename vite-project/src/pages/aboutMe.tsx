@@ -92,15 +92,8 @@ const AboutMe: React.FC = () => {
                                 </>
                             )}
                             </div>
-                        </>
-                        ),
-                    },
-                    {
-                        id: "corporate-experience",
-                        year: "2022",
-                        content: (
-                            <>
-                            <div className="font-bold text-[20px] text-left">
+
+                            <div className="font-bold text-[20px] text-left mt-3">
                                 {language === "en" ? "Corporate Experience" : "Expérience en entreprise"}
                             </div>
                             <div className="text-gray-600 leading-relaxed text-[18px] text-left">
@@ -114,10 +107,10 @@ const AboutMe: React.FC = () => {
                                 </>
                                 )}
                             </div>
-                            </>
+                        </>
                         ),
-                        },
-                        {
+                    },
+                    {
                         id: "academic-exchange",
                         year: "2023",
                         content: (
@@ -140,79 +133,71 @@ const AboutMe: React.FC = () => {
                             </div>
                             </>
                         ),
-                        },
-                        {
-                            id: "applied-research",
-                            year: "2024",
-                            content: (
+                    },
+                    {
+                        id: "applied-research",
+                        year: "2024",
+                        content: (
+                            <>
+                            <div className="font-bold text-[20px] text-left">
+                                {language === "en"
+                                ? "Applied Research and Organizational Impact"
+                                : "Recherche appliquée et impact organisationnel"}
+                            </div>
+                            <div className="text-gray-600 leading-relaxed text-[18px] text-left">
+                                {language === "en" ? (
                                 <>
-                                <div className="font-bold text-[20px] text-left">
-                                    {language === "en"
-                                    ? "Applied Research and Organizational Impact"
-                                    : "Recherche appliquée et impact organisationnel"}
-                                </div>
-                                <div className="text-gray-600 leading-relaxed text-[18px] text-left">
-                                    {language === "en" ? (
-                                    <>
-                                        After the exchange program, I did a six-month paid internship at P&D Euranova in Marseille. Along with my persistence and initiative, I managed to negotiate with CEFET’s direction to authorize this internship, which was not allowed institutionally. This experience required reading diverse scientific papers and resulted in a rapport de stage, which served as a guide to developers within Euranova to code AI in a more frugal way. Besides, I presented monthly to the company the advancements of the project, in sessions of 30 minutes, strengthening my technical communication skills. All of that was balanced with my final thesis, which demanded great discipline and time management.
-                                    </>
-                                    ) : (
-                                    <>
-                                        Après le programme d’échange, j’ai effectué un stage rémunéré de six mois chez P&D Euranova à Marseille. Grâce à ma persévérance et mon initiative, j’ai réussi à négocier avec la direction du CEFET l’autorisation de ce stage, qui n’était pas permise institutionnellement. Cette expérience a nécessité la lecture de divers articles scientifiques et a abouti à un rapport de stage servant de guide aux développeurs d’Euranova pour coder l’IA de manière plus économe. De plus, je présentais chaque mois à l’entreprise l’avancement du projet lors de sessions de 30 minutes, renforçant mes compétences en communication technique. Le tout était équilibré avec mon mémoire final, qui exigeait une grande discipline et gestion du temps.
-                                    </>
-                                    )}
-                                </div>
+                                    After the exchange program, I did a six-month paid internship at P&D Euranova in Marseille. Along with my persistence and initiative, I managed to negotiate with CEFET’s direction to authorize this internship, which was not allowed institutionally. This experience required reading diverse scientific papers and resulted in a rapport de stage, which served as a guide to developers within Euranova to code AI in a more frugal way. Besides, I presented monthly to the company the advancements of the project, in sessions of 30 minutes, strengthening my technical communication skills. All of that was balanced with my final thesis, which demanded great discipline and time management.
                                 </>
-                            ),
-                        },
-                        {
-                            id: "course-conclusion",
-                            year: "2025",
-                            content: (
+                                ) : (
                                 <>
-                                <div className="font-bold text-[20px] text-left">
-                                    {language === "en"
-                                    ? "Course conclusion and Academic recognition"
-                                    : "Conclusion du cursus et reconnaissance académique"}
-                                </div>
-                                <div className="text-gray-600 leading-relaxed text-[18px] text-left">
-                                    {language === "en" ? (
-                                    <>
-                                        During two semesters, I deepened my research in machine learning, analyzing dozens of papers and producing my undergraduate dissertation. That effort culminated in one of the greatest achievements of my trajectory: receiving the maximum grade unanimously from the examining committee.
-                                    </>
-                                    ) : (
-                                    <>
-                                        Pendant deux semestres, j’ai approfondi ma recherche en apprentissage automatique, en analysant des dizaines d’articles et en produisant mon mémoire de fin d’études. Cet effort a culminé dans l’une des plus grandes réussites de mon parcours : obtenir la note maximale à l’unanimité du jury d’examen.
-                                    </>
-                                    )}
-                                </div>
+                                    Après le programme d’échange, j’ai effectué un stage rémunéré de six mois chez P&D Euranova à Marseille. Grâce à ma persévérance et mon initiative, j’ai réussi à négocier avec la direction du CEFET l’autorisation de ce stage, qui n’était pas permise institutionnellement. Cette expérience a nécessité la lecture de divers articles scientifiques et a abouti à un rapport de stage servant de guide aux développeurs d’Euranova pour coder l’IA de manière plus économe. De plus, je présentais chaque mois à l’entreprise l’avancement du projet lors de sessions de 30 minutes, renforçant mes compétences en communication technique. Le tout était équilibré avec mon mémoire final, qui exigeait une grande discipline et gestion du temps.
                                 </>
-                            ),
-                        },
-                        {
-                            id: "professional-trajectory",
-                            year: "2025",
-                            content: (
+                                )}
+                            </div>
+                            </>
+                        ),
+                    },
+                    {
+                        id: "course-conclusion",
+                        year: "2025",
+                        content: (
+                            <>
+                            <div className="font-bold text-[20px] text-left">
+                                {language === "en"
+                                ? "Course conclusion and Academic recognition"
+                                : "Conclusion du cursus et reconnaissance académique"}
+                            </div>
+                            <div className="text-gray-600 leading-relaxed text-[18px] text-left">
+                                {language === "en" ? (
                                 <>
-                                <div className="font-bold text-[20px] text-left">
-                                    {language === "en"
-                                    ? "Professional trajectory and Research progress"
-                                    : "Parcours professionnel et avancées en recherche"}
-                                </div>
-                                <div className="text-gray-600 leading-relaxed text-[18px] text-left">
-                                    {language === "en" ? (
-                                    <>
-                                        Later, I started a career as a Web Developer, where I joined a senior team working with an agile methodology to develop a platform for Hapvida, one of the largest health plan companies in Brazil. In parallel, alongside Prof. Eduardo Bezerra, I developed the project Nemesis, derived from my thesis. That project won first place in a national contest with 44 other participants and was later presented by Prof. Bezerra and me at Painel Telebrasil 2025 in Brazil’s capital city, Brasília.
-                                    </>
-                                    ) : (
-                                    <>
-                                        Par la suite, j’ai commencé une carrière de développeur web, rejoignant une équipe senior travaillant en méthodologie agile pour développer une plateforme pour Hapvida, l’une des plus grandes compagnies de santé au Brésil. Parallèlement, avec le Prof. Eduardo Bezerra, j’ai développé le projet Nemesis, dérivé de mon mémoire. Ce projet a remporté la première place dans un concours national avec 44 autres participants et a ensuite été présenté par le Prof. Bezerra et moi au Painel Telebrasil 2025 dans la capitale du Brésil, Brasília.
-                                    </>
-                                    )}
-                                </div>
+                                    During two semesters, I deepened my research in machine learning, analyzing dozens of papers and producing my undergraduate dissertation. That effort culminated in one of the greatest achievements of my trajectory: receiving the maximum grade unanimously from the examining committee.
                                 </>
-                            ),
-                        },
+                                ) : (
+                                <>
+                                    Pendant deux semestres, j’ai approfondi ma recherche en apprentissage automatique, en analysant des dizaines d’articles et en produisant mon mémoire de fin d’études. Cet effort a culminé dans l’une des plus grandes réussites de mon parcours : obtenir la note maximale à l’unanimité du jury d’examen.
+                                </>
+                                )}
+                            </div>
+                            <div className="font-bold text-[20px] text-left mt-3">
+                                {language === "en"
+                                ? "Professional trajectory and Research progress"
+                                : "Parcours professionnel et avancées en recherche"}
+                            </div>
+                            <div className="text-gray-600 leading-relaxed text-[18px] text-left">
+                                {language === "en" ? (
+                                <>
+                                    Later, I started a career as a Web Developer, where I joined a senior team working with an agile methodology to develop a platform for Hapvida, one of the largest health plan companies in Brazil. In parallel, alongside Prof. Eduardo Bezerra, I developed the project Nemesis, derived from my thesis. That project won first place in a national contest with 44 other participants and was later presented by Prof. Bezerra and me at Painel Telebrasil 2025 in Brazil’s capital city, Brasília.
+                                </>
+                                ) : (
+                                <>
+                                    Par la suite, j’ai commencé une carrière de développeur web, rejoignant une équipe senior travaillant en méthodologie agile pour développer une plateforme pour Hapvida, l’une des plus grandes compagnies de santé au Brésil. Parallèlement, avec le Prof. Eduardo Bezerra, j’ai développé le projet Nemesis, dérivé de mon mémoire. Ce projet a remporté la première place dans un concours national avec 44 autres participants et a ensuite été présenté par le Prof. Bezerra et moi au Painel Telebrasil 2025 dans la capitale du Brésil, Brasília.
+                                </>
+                                )}
+                            </div>
+                            </>
+                        ),
+                    },
 
                     ]}
                     />
