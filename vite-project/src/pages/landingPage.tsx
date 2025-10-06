@@ -75,7 +75,7 @@ const LandingPage: React.FC = () => {
 
           {/* CEFET */}
           <div className="p-4 border-l-4 border-orange-500 bg-orange-50 shadow-sm rounded-md">
-            <h3 className="font-bold">2019 – 2025 · Computer Science BSc @ CEFET</h3>
+            <h3 className="font-bold mb-2">2019 – 2025 · Computer Science BSc @ CEFET</h3>
             <p className="text-gray-600">
               Built strong foundations in algorithms, data structures, and software engineering.
             </p>
@@ -87,7 +87,7 @@ const LandingPage: React.FC = () => {
 
           {/* AIX-MARSEILLE */}
           <div className="p-4 border-l-4 border-pink-500 bg-pink-50 shadow-sm rounded-md">
-            <h3 className="font-bold">2023 – 2024 · Master (Exchange) @ Aix-Marseille University</h3>
+            <h3 className="font-bold mb-2">2023 – 2024 · Master (Exchange) @ Aix-Marseille University</h3>
             <p className="text-gray-600">
               Deepened my skills in Data Science, AI, and applied research while living in France.
             </p>
@@ -101,7 +101,7 @@ const LandingPage: React.FC = () => {
 
           {/* Final Year Project */}
           <div className="p-4 border-l-4 border-blue-500 bg-blue-50 shadow-sm rounded-md">
-            <h3 className="font-bold">2024 – 2025 · Bachelor’s Final Project</h3>
+            <h3 className="font-bold mb-2">2024 – 2025 · Bachelor’s Final Project</h3>
             <p className="text-gray-600">
               Applied Deep Embedded Clustering (DEC) and Natural Language Processing (NLP) to group and analyze Brazilian government expenditure data, supervised by Prof. <a href="https://eic.cefet-rj.br/~ebezerra/" className="underline text-blue-600 hover:text-blue-800">Eduardo Bezerra</a>.
             </p>
@@ -114,7 +114,7 @@ const LandingPage: React.FC = () => {
           {/* Project Nemesis */}
           
             <div className="p-4 border-l-4 border-red-500 bg-red-50 shadow-sm rounded-md">
-              <div className="flex items-center gap-2 mx-auto justify-center">
+              <div className="flex items-center gap-2 mx-auto justify-center mb-2">
                 <h3 className="font-bold">Project <i>Nemesis</i></h3>
                 <div className="flex gap-4">
                 <a 
@@ -153,7 +153,7 @@ const LandingPage: React.FC = () => {
 
           {/* Current Research */}
           <div className="p-4 border-l-4 border-green-500 bg-green-50 shadow-sm rounded-md">
-            <h3 className="font-bold">2025 – Present · Research Paper in Progress</h3>
+            <h3 className="font-bold mb-2">2025 – Present · Research Paper in Progress</h3>
             <p className="text-gray-600">
               Leading a comparative study of clustering algorithms (SDEC, DEC, K-Means, Spectral Clustering) applied to genetic data for cancer prediction. Building ablation pipelines with PCA and scalers to evaluate reproducibility and performance.
             </p>

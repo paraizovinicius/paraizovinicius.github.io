@@ -5,7 +5,7 @@ const Projects: React.FC = () => {
     return (
         <div className="min-h-screen pl-0 md:pl-22 md:max-w-[70%] mx-auto bg-gray-50 text-gray-800 py-12 px-6 mt-8 md:mt-0">
             <h1 className="text-4xl font-bold mb-8 text-center">Projects</h1>
-            <div className="max-w-4xl mx-auto grid gap-8 md:grid-cols-1">
+            <div className="max-w-4xl mx-auto grid gap-8 md:grid-cols-1 pl-4">
                 <ProjectCard
                     title="Government Spending Audit: A Natural Language Processing Approach"
                     description={<div>Applied a non-official Deep Embedded Clustering (DEC) algorithm implementation from <a href="https://github.com/vlukiyanov/pt-dec/tree/master" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">
