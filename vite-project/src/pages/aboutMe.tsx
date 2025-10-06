@@ -39,7 +39,11 @@ const AboutMe: React.FC = () => {
                 </div>
 
                 <hr className="border-t border-gray-300 mt-2 mb-1.5 max-w-[80%] mx-auto mt-10 mb-3" />
-                <h2 className="text-4xl font-semibold mb-2 text-center">Professional Trajectory</h2>
+                {language === "en" ? (
+                    <h2 className="text-4xl font-semibold mb-2 text-center">Professional Trajectory</h2>
+                ) : (
+                    <h2 className="text-4xl font-semibold mb-2 text-center">Mon Parcours</h2>
+                )}
                 
                 <TimelineComponent
                     items={[
@@ -160,8 +164,8 @@ const AboutMe: React.FC = () => {
                                 </div>
                                 </>
                             ),
-                            },
-                            {
+                        },
+                        {
                             id: "course-conclusion",
                             year: "2025",
                             content: (
@@ -184,8 +188,8 @@ const AboutMe: React.FC = () => {
                                 </div>
                                 </>
                             ),
-                            },
-                            {
+                        },
+                        {
                             id: "professional-trajectory",
                             year: "2025",
                             content: (
@@ -208,7 +212,7 @@ const AboutMe: React.FC = () => {
                                 </div>
                                 </>
                             ),
-                            },
+                        },
 
                     ]}
                     />
