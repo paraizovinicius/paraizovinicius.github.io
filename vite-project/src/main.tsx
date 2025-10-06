@@ -4,14 +4,17 @@ import './index.css'
 import App from './App.tsx'
 import Navbar from './components/navbar.tsx'
 import Footer from './components/footer.tsx'
+import { LanguageProvider } from './contexts/LanguageContext';
 import { BrowserRouter } from "react-router-dom";
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
-      <Navbar />
-      <App />
-      <Footer />
+      <LanguageProvider>
+        <Navbar />
+        <App />
+        <Footer />
+      </LanguageProvider>
     </BrowserRouter>
   </StrictMode>,
 )

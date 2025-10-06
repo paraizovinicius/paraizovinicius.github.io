@@ -1,9 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
+import { US, FR } from 'country-flag-icons/react/3x2'
 
 export default function Navbar() {
   const navigate = useNavigate();
   const [bgColor, setBgColor] = useState("bg-[#212830]");
+  const { language, setLanguage } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,7 +58,7 @@ export default function Navbar() {
             window.scrollTo(0, 0);
           }}
         >
-          About Me
+          {language === "en" ? (<>About Me</>) : (<>À propos de moi</>)}
         </span>
 
         <span
@@ -65,8 +68,26 @@ export default function Navbar() {
             window.scrollTo(0, 0);
           }}
         >
-          Projects
+          {language === "en" ? (<>Projects</>) : (<>Projets</>)}
         </span>
+
+        <div className="flex gap-2 items-center mx-auto">
+          <span
+            className={`text-sm text-white/80 px-2 py-1 rounded hover:underline hover:text-orange-300 cursor-pointer ${language === "en" ? "text-orange font-bold" : ""}`}
+            onClick={() => setLanguage("en")}
+            aria-label="Set English"
+          >
+            EN <US title="United States" className="mt-1"/>
+          </span>
+          <span
+            className={`text-sm text-white/80 px-2 py-1 rounded hover:underline hover:text-orange-300 cursor-pointer ${language === "fr" ? "text-orange font-bold" : ""}`}
+            onClick={() => setLanguage("fr")}
+            aria-label="Set French"
+          >
+            FR <FR title="France" className="mt-1"/>
+          </span>
+        </div>
+
       </div>
     </nav>
   );
