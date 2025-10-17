@@ -209,13 +209,13 @@ const LandingPage: React.FC = () => {
                   <ExternalLink className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://oglobo.globo.com/google/amp/rio/bairros/tijuca-e-zona-norte/noticia/2025/09/29/com-software-que-promete-revolucionar-fiscalizacao-do-tce-alunos-e-professores-do-cefet-ganham-premio-nacional.ghtml"
+                  href="https://youtu.be/a5sQ414Ikto?si=kA12jHchzoSNakxD "
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center text-[10px] gap-1 text-red-600 hover:text-red-800 transition-colors duration-200"
                   title="Open project details in new tab"
                 >
-                  (oglobo)
+                  (GLOBO RJ1)
                   <ExternalLink className="w-4 h-4" />
                 </a>
                 </div>

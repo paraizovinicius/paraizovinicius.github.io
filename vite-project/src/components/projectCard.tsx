@@ -117,7 +117,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tech, git
                             key={index}
                             onClick={() => setCurrent(index)}
                             className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-                            index === current ? "bg-white" : "bg-gray-400"
+                            index === current ? "bg-gray-200" : "bg-gray-400"
                             }`}
                         />
                         ))}
