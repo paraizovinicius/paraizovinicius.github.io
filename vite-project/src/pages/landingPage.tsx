@@ -5,7 +5,6 @@ import tese from "../assets/TCC_2024_ViniciusParaizo.pdf"
 import cv from "../assets/CV - Vinicius Paraizo.pdf"
 import { useLanguage } from "../contexts/LanguageContext";
 
-// TODO: idiomas diferentes
 
 const LandingPage: React.FC = () => {
   const { language, t } = useLanguage();
