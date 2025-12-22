@@ -191,48 +191,6 @@ const LandingPage: React.FC = () => {
           </div>
 
 
-          {/* Project Fiscaliza */}
-          <div className="p-4 border-l-4 border-brown bg-brown shadow-sm rounded-md">
-            <div className="flex items-center gap-2 mx-auto justify-center mb-2">
-              <h3 className="font-bold mb-2">Project <i>Fiscalizando</i></h3>
-              <a 
-                href="https://www.youtube.com/watch?v=7BBp_R69gW0&t=48s" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center text-[10px] gap-1 text-red-600 hover:text-red-800 transition-colors duration-200"
-                title="Open project details in new tab"
-              >
-                Youtube
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </div>
-            {language === "en" ? (
-              <p className="text-gray-600">
-                Developed a web application serving as a transparency portal for citizens, providing access to voting records and legislative propositions from state deputies. supervised by Prof.{" "}
-                    <a href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do;jsessionid=C181FBADA141F9C4C031C8B178FE4062.buscatextual_0" className="underline text-blue-600 hover:text-blue-800">
-                      Marcelo Arêas
-                    </a>.
-              </p>
-            ) : (
-              <p className="text-gray-600">
-                Développement d’une application web servant de portail de transparence pour les citoyens, offrant l’accès aux registres de vote et aux propositions législatives des députés d’État.
-                Superivision: Prof.{" "}
-                    <a href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do;jsessionid=C181FBADA141F9C4C031C8B178FE4062.buscatextual_0" className="underline text-blue-600 hover:text-blue-800">
-                      Marcelo Arêas
-                    </a>.
-              </p>
-            )}
-            <hr className="border-t border-gray-300 mt-2 mb-1.5 max-w-[80%] mx-auto" />
-            <ul className="list-disc ml-5 text-gray-600 mt-2 space-y-1 text-left">
-            {language === "en" ? (
-              <li>Built with React, FastAPI, PostgreSQL, Docker, Nginx, and an external public API integration.</li>
-            ) : (
-              <li>Développée avec React, FastAPI, PostgreSQL, Docker, Nginx et des intégrations d’API externes.</li>
-            )}
-          </ul>
-
-          </div>
-
           {/* Current Research */}
           <div className="p-4 border-l-4 border-green-500 bg-green-50 shadow-sm rounded-md">
             <h3 className="font-bold mb-2">Paper in progress: <i>SCRNA-Seq Analysis</i></h3>
