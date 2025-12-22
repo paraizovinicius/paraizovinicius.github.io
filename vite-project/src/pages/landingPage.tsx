@@ -1,6 +1,6 @@
 import React from "react";
 import eu from "../assets/eu.png";
-import { Mail, ExternalLink } from "lucide-react";
+import { Mail } from "lucide-react";
 import tese from "../assets/TCC_2024_ViniciusParaizo.pdf"
 import cv from "../assets/CV - Vinicius Paraizo.pdf"
 import { useLanguage } from "../contexts/LanguageContext";
