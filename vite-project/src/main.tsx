@@ -12,7 +12,7 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <LanguageProvider>
         <Navbar />
-        <App />
+          <App />
         <Footer />
       </LanguageProvider>
     </BrowserRouter>

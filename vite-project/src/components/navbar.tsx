@@ -64,6 +64,16 @@ export default function Navbar() {
         <span
           className="text-white text-md md:text-lg py-1 px-2 md:px-4 hover:underline hover:text-orange-300 cursor-pointer"
           onClick={() => {
+            navigate("/Teaching");
+            window.scrollTo(0, 0);
+          }}
+        >
+          {language === "en" ? (<>Teaching</>) : (<>Teaching</>)}
+        </span>
+
+        <span
+          className="text-white text-md md:text-lg py-1 px-2 md:px-4 hover:underline hover:text-orange-300 cursor-pointer"
+          onClick={() => {
             navigate("/Projects");
             window.scrollTo(0, 0);
           }}

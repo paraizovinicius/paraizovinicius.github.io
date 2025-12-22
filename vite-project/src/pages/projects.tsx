@@ -17,28 +17,16 @@ const Projects: React.FC = () => {
                     description={
                         language === "en" ? (
                         <div>
-                            Applied a non-official Deep Embedded Clustering (DEC) algorithm implementation from{" "}
-                            <a
-                            href="https://github.com/vlukiyanov/pt-dec/tree/master"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-400 underline"
-                            >
-                            vlukiyanov/pt-dec
-                            </a>{" "}
-                            to group public spending records of local government (TCE/RJ). Preprocessing included converting 1.4M records from CSV to Parquet format and transforming text fields into semantic embeddings. Processing involved training an autoencoder for dimensionality reduction, followed by DEC clustering. Achieved a silhouette score of 0.9172, indicating highly coherent clusters.
+                            Applied a Deep Embedded Clustering (DEC) algorithm to group public spending 
+                            records of local government (TCE/RJ). Preprocessing included converting 1.4M 
+                            records from CSV to Parquet format and transforming text fields into semantic 
+                            embeddings. Processing involved training an autoencoder for dimensionality 
+                            reduction, followed by DEC clustering. Achieved a silhouette score of 0.9172, 
+                            indicating highly coherent clusters.
                         </div>
                         ) : (
                         <div>
-                            Application d’une implémentation non officielle de l’algorithme Deep Embedded Clustering (DEC) depuis{" "}
-                            <a
-                            href="https://github.com/vlukiyanov/pt-dec/tree/master"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-400 underline"
-                            >
-                            vlukiyanov/pt-dec
-                            </a>{" "}
+                            Application d’une implémentation de l’algorithme Deep Embedded Clustering (DEC) 
                             pour regrouper les enregistrements de dépenses publiques du gouvernement local (TCE/RJ). Le prétraitement comprenait la conversion de 1,4 million d’enregistrements de CSV en format Parquet et la transformation des champs textuels en embeddings sémantiques. Le traitement impliquait l’entraînement d’un autoencodeur pour la réduction de dimension, suivi du clustering DEC. Un score de silhouette de 0,9172 a été atteint, indiquant des clusters très cohérents.
                         </div>
                         )
@@ -52,7 +40,10 @@ const Projects: React.FC = () => {
                     description={
                         language === "en" ? (
                         <div>
-                            Developed in collaboration with Prof. Eduardo Bezerra and M.Sc Wellington Amaral, Nemesis 
+                            Developed in collaboration with Prof.{" "}
+                            <a href="https://eic.cefet-rj.br/~ebezerra/" className="underline text-blue-600 hover:text-blue-800">
+                                Eduardo Bezerra
+                            </a> and M.Sc Wellington Amaral, Nemesis 
                             (Notas de EMpenho com Estratégia Semântica e Inteligência de Sistemas) is a web application 
                             with database integration via FastAPI.
                             <hr className="border-t border-gray-300 mt-2 mb-1.5 max-w-[80%] mx-auto" />
@@ -71,7 +62,10 @@ const Projects: React.FC = () => {
                         </div>
                         ) : (
                         <div>
-                            Développé en collaboration avec le Prof. Eduardo Bezerra et le M.Sc Wellington Amaral, Nemesis 
+                            Développé en collaboration avec le Prof.{" "}
+                            <a href="https://eic.cefet-rj.br/~ebezerra/" className="underline text-blue-600 hover:text-blue-800">
+                                Eduardo Bezerra
+                            </a> et le M.Sc Wellington Amaral, Nemesis 
                             (Notas de EMpenho com Estratégia Semântica e Inteligência de Sistemas) est une application web 
                             intégrée à une base de données via FastAPI.
                             <hr className="border-t border-gray-300 mt-2 mb-1.5 max-w-[80%] mx-auto" />
@@ -86,13 +80,66 @@ const Projects: React.FC = () => {
                             <li>
                                 Analyse de surfacturation, comparant les enregistrements filtrés avec des enregistrements sémantiquement similaires d’autres municipalités la même année en utilisant pgvector dans PostgreSQL.
                             </li>
-                            </ul>
-                        </div>
+                            </ul>                        </div>
                         )
                     }
                     tech={["React", "FastAPI", "SQLAlchemy", "Pgvector", "SDAE"]}
                     github="https://github.com/AILAB-CEFET-RJ/nemesis"
                     demo=""
+                    externalLinks={[
+                        {
+                            url: "https://www.correiobraziliense.com.br/euestudante/educacao-profissional/2025/09/7240957-projetos-focados-em-inovacao-e-tecnologia-sao-premiados-em-brasilia.html",
+                            label: "Correio Braziliense"
+                        },
+                        {
+                            url: "https://youtu.be/a5sQ414Ikto?si=kA12jHchzoSNakxD",
+                            label: "GLOBO RJ1"
+                        }
+                    ]}
+                />
+
+                <ProjectCard
+                    title="Fiscalizando"
+                    description={
+                        language === "en" ? (
+                        <div>
+                            Developed a web application serving as a transparency portal for citizens, providing access to voting records and legislative propositions from state deputies. Supervised by Prof.{" "}
+                            <a href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do;jsessionid=C181FBADA141F9C4C031C8B178FE4062.buscatextual_0" className="underline text-blue-600 hover:text-blue-800">
+                                Marcelo Arêas
+                            </a>.
+                            <hr className="border-t border-gray-300 mt-2 mb-1.5 max-w-[80%] mx-auto" />
+                            <ul className="list-disc pl-6 text-left space-y-2">
+                                <li>Implemented a deputy comparison feature to analyze voting alignment between two representatives.</li>
+                                <li>Built advanced search functionality to explore deputies’ legislative proposals, voting history, past mandates, and contact information.</li>
+                                <li>Designed automated daily database updates using FastAPI to fetch new voting sessions and legislative proposals into PostgreSQL.</li>
+                                <li>Deployed the application using Docker and Nginx for scalable and reliable delivery.</li>
+                            </ul>
+                        </div>
+                        ) : (
+                        <div>
+                            Développement d'une application web servant de portail de transparence pour les citoyens, offrant l'accès aux registres de vote et aux propositions législatives des députés d'État. Supervision: Prof.{" "}
+                            <a href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do;jsessionid=C181FBADA141F9C4C031C8B178FE4062.buscatextual_0" className="underline text-blue-600 hover:text-blue-800">
+                                Marcelo Arêas
+                            </a>.
+                            <hr className="border-t border-gray-300 mt-2 mb-1.5 max-w-[80%] mx-auto" />
+                            <ul className="list-disc pl-6 text-left space-y-2">
+                                <li>Mise en place d’une fonctionnalité de comparaison des députés afin d’analyser l’alignement de leurs votes.</li>
+                                <li>Développement d’une recherche avancée permettant d’explorer les propositions législatives, l’historique de vote, les mandats passés et les informations de contact des députés.</li>
+                                <li>Conception de mises à jour automatiques quotidiennes de la base de données via FastAPI pour récupérer les nouvelles sessions de vote et propositions législatives dans PostgreSQL.</li>
+                                <li>Déploiement de l’application à l’aide de Docker et Nginx pour une livraison scalable et fiable.</li>
+                            </ul>
+                        </div>
+                        )
+                    }
+                    tech={["React", "FastAPI", "PostgreSQL", "Docker", "Nginx"]}
+                    github="https://github.com/paraizovinicius/Fiscalizando-App"
+                    demo=""
+                    externalLinks={[
+                        {
+                            url: "https://www.youtube.com/watch?v=7BBp_R69gW0&t=48s",
+                            label: "YouTube"
+                        }
+                    ]}
                 />
 
                 <ProjectCard
@@ -100,51 +147,73 @@ const Projects: React.FC = () => {
                     description={
                         language === "en" ? (
                         <div>
-                            Implementation created to benchmark several clustering algorithms: SDEC, DEC, KMeans, and Spectral Clustering. 
-                            This work extends a previous project,{" "}
-                            <a
-                            href="https://github.com/AILAB-CEFET-RJ/brca-scrna-seq/tree/master"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-400 underline"
-                            >
-                            SCRNA-Seq Analysis of BRCA Patients
-                            </a>
-                            , which compared KMeans and Spectral Clustering across different preprocessing pipelines (Standard Scaler and PCA). 
-                            My main contribution was integrating DEC and implementing SDEC from scratch, based on the unofficial DEC implementation{" "}
-                            <a
-                            href="https://github.com/vlukiyanov/pt-dec/tree/master"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-400 underline"
-                            >
-                            vlukiyanov/pt-dec
-                            </a>
-                            . The key modification was enhancing the DEC loss function by incorporating a semi-supervised component using pairwise constraints, improving clustering performance on labeled data.
+                            Benchmarking implementation for several clustering algorithms (SDEC, DEC, KMeans, and Spectral Clustering) applied to single-cell RNA sequencing data.
+                            <hr className="border-t border-gray-300 mt-2 mb-1.5 max-w-[80%] mx-auto" />
+                            <ul className="list-disc pl-6 text-left space-y-2">
+                            <li>
+                                Extended a previous project comparing KMeans and Spectral Clustering across different preprocessing pipelines:{" "}
+                                <a
+                                href="https://github.com/AILAB-CEFET-RJ/brca-scrna-seq/tree/master"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-600 underline"
+                                >
+                                SCRNA-Seq Analysis of BRCA Patients
+                                </a>.
+                            </li>
+                            <li>
+                                Integrated Deep Embedded Clustering (DEC) based on{" "}
+                                <a
+                                href="https://github.com/vlukiyanov/pt-dec/tree/master"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-600 underline"
+                                >
+                                vlukiyanov/pt-dec
+                                </a>.
+                            </li>
+                            <li>
+                                Implemented Semi-supervised Deep Embedded Clustering (SDEC) from scratch by enhancing the DEC loss function with pairwise constraints.
+                            </li>
+                            <li>
+                                Improved clustering performance on labeled data through semi-supervised learning techniques.
+                            </li>
+                            </ul>
                         </div>
                         ) : (
                         <div>
-                            Implémentation créée pour évaluer plusieurs algorithmes de regroupement : SDEC, DEC, KMeans et Clustering Spectral. 
-                            Ce travail prolonge un projet précédent,{" "}
-                            <a
-                            href="https://github.com/AILAB-CEFET-RJ/brca-scrna-seq/tree/master"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-400 underline"
-                            >
-                            SCRNA-Seq Analysis of BRCA Patients
-                            </a>
-                            , qui comparait KMeans et Clustering Spectral à travers différents pipelines de prétraitement (Standard Scaler et PCA). 
-                            Ma principale contribution a été d’intégrer DEC et d’implémenter SDEC à partir de zéro, en me basant sur l’implémentation non officielle de DEC{" "}
-                            <a
-                            href="https://github.com/vlukiyanov/pt-dec/tree/master"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-400 underline"
-                            >
-                            vlukiyanov/pt-dec
-                            </a>
-                            . La modification clé consistait à améliorer la fonction de perte de DEC en intégrant une composante semi-supervisée utilisant des contraintes par paires, améliorant ainsi les performances du regroupement sur des données étiquetées.
+                            Implémentation d’un benchmark de plusieurs algorithmes de regroupement (SDEC, DEC, KMeans et Clustering Spectral) appliqués aux données de séquençage ARN à cellule unique (scRNA-seq).
+                            <hr className="border-t border-gray-300 mt-2 mb-1.5 max-w-[80%] mx-auto" />
+                            <ul className="list-disc pl-6 text-left space-y-2">
+                            <li>
+                                Extension d’un projet précédent comparant KMeans et le Clustering Spectral selon différents pipelines de prétraitement:{" "}
+                                <a
+                                href="https://github.com/AILAB-CEFET-RJ/brca-scrna-seq/tree/master"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-600 underline"
+                                >
+                                SCRNA-Seq Analysis of BRCA Patients
+                                </a>.
+                            </li>
+                            <li>
+                                Intégration de l’algorithme Deep Embedded Clustering (DEC) basée sur l’implémentation{" "}
+                                <a
+                                href="https://github.com/vlukiyanov/pt-dec/tree/master"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-600 underline"
+                                >
+                                vlukiyanov/pt-dec
+                                </a>.
+                            </li>
+                            <li>
+                                Implémentation complète de Semi-supervised Deep Embedded Clustering (SDEC) à partir de zéro, en enrichissant la fonction de perte de DEC avec des <i>pairwise constraints</i>.
+                            </li>
+                            <li>
+                                Amélioration des performances de regroupement sur des données étiquetées grâce à des techniques d’apprentissage semi-supervisé.
+                            </li>
+                            </ul>
                         </div>
                         )
                     }

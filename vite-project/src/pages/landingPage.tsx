@@ -21,9 +21,8 @@ const LandingPage: React.FC = () => {
         
       {language === "en" ? (
         <>
-          I am a Computer Sciences student who will graduate at the end of 2025. 
-          Most recently, in 2024, I did a Master's exchange program at Aix-Marseille University. 
-          My final project thesis is entitled{" "}
+          I am a Computer Scientist graduated by CEFET/RJ, with a Master's exchange program experience 
+          at Aix-Marseille University. My final project thesis is entitled{" "}
           <em>"Audit of Government Spending: An approach using Natural Language Processing"</em>. 
           You can find the manuscript{" "}
           <a
@@ -37,8 +36,8 @@ const LandingPage: React.FC = () => {
         </>
       ) : (
         <>
-          Je suis étudiant en informatique et je terminerai mes études à la fin de 2025. 
-          Plus récemment, en 2024, j’ai effectué un programme de Master en échange à l’Université Aix-Marseille. 
+          Je suis un informaticien diplômé par CEFET/RJ avec une expérience Master 1 à
+          l'université d'Aix-marseille.
           Mon mémoire de fin d’études s’intitule{" "}
           <em>"Audit des dépenses publiques : une approche utilisant le traitement automatique du langage naturel"</em>. 
           Vous pouvez consulter le manuscrit{" "}
@@ -123,7 +122,7 @@ const LandingPage: React.FC = () => {
 
           {/* AIX-MARSEILLE */}
           <div className="p-4 border-l-4 border-pink-500 bg-pink-50 shadow-sm rounded-md">
-            <h3 className="font-bold mb-2">2023 – 2024 · Master (Exchange) @ Aix-Marseille University</h3>
+            <h3 className="font-bold mb-2">2023 – 2024 · Master 1 @ Aix-Marseille University</h3>
             {language === "en" ? (
               <p className="text-gray-600">
                 Deepened my skills in Data Science, AI, and applied research while living in France.
@@ -163,7 +162,7 @@ const LandingPage: React.FC = () => {
 
           {/* Final Year Project */}
           <div className="p-4 border-l-4 border-blue-500 bg-blue-50 shadow-sm rounded-md">
-            <h3 className="font-bold mb-2">2024 – 2025 · Bachelor’s Final Project</h3>
+            <h3 className="font-bold mb-2">2024 – 2025 · Final Year Thesis</h3>
             {language === "en" ? (
             <p className="text-gray-600">
               Applied Deep Embedded Clustering (DEC) and Natural Language Processing (NLP) to group and analyze Brazilian government expenditure data, supervised by Prof.{" "}
@@ -191,64 +190,52 @@ const LandingPage: React.FC = () => {
             )}
           </div>
 
-          {/* Project Nemesis */}
-          
-            <div className="p-4 border-l-4 border-red-500 bg-red-50 shadow-sm rounded-md">
-              <div className="flex items-center gap-2 mx-auto justify-center mb-2">
-                <h3 className="font-bold">Project <i>Nemesis</i></h3>
-                <div className="flex gap-4">
-                <a 
-                  href="https://www.correiobraziliense.com.br/euestudante/educacao-profissional/2025/09/7240957-projetos-focados-em-inovacao-e-tecnologia-sao-premiados-em-brasilia.html" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center text-[10px] gap-1 text-red-600 hover:text-red-800 transition-colors duration-200"
-                  title="Open project details in new tab"
-                >
-                  (correio braziliense)
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-                <a
-                  href="https://youtu.be/a5sQ414Ikto?si=kA12jHchzoSNakxD "
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-[10px] gap-1 text-red-600 hover:text-red-800 transition-colors duration-200"
-                  title="Open project details in new tab"
-                >
-                  (GLOBO RJ1)
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-                </div>
-              </div>
-            
-            
-              {language === "en" ? (
-                <p className="text-gray-600">
-                  Developed a web-based auditing platform for the government of Rio de Janeiro.
-                </p>
-              ) : (
-                <p className="text-gray-600">
-                  Développement d’une plateforme d’audit en ligne pour le gouvernement de Rio de Janeiro.
-                </p>
-              )}
+
+          {/* Project Fiscaliza */}
+          <div className="p-4 border-l-4 border-brown bg-brown shadow-sm rounded-md">
+            <div className="flex items-center gap-2 mx-auto justify-center mb-2">
+              <h3 className="font-bold mb-2">Project <i>Fiscalizando</i></h3>
+              <a 
+                href="https://www.youtube.com/watch?v=7BBp_R69gW0&t=48s" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center text-[10px] gap-1 text-red-600 hover:text-red-800 transition-colors duration-200"
+                title="Open project details in new tab"
+              >
+                Youtube
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
+            {language === "en" ? (
+              <p className="text-gray-600">
+                Developed a web application serving as a transparency portal for citizens, providing access to voting records and legislative propositions from state deputies. supervised by Prof.{" "}
+                    <a href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do;jsessionid=C181FBADA141F9C4C031C8B178FE4062.buscatextual_0" className="underline text-blue-600 hover:text-blue-800">
+                      Marcelo Arêas
+                    </a>.
+              </p>
+            ) : (
+              <p className="text-gray-600">
+                Développement d’une application web servant de portail de transparence pour les citoyens, offrant l’accès aux registres de vote et aux propositions législatives des députés d’État.
+                Superivision: Prof.{" "}
+                    <a href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do;jsessionid=C181FBADA141F9C4C031C8B178FE4062.buscatextual_0" className="underline text-blue-600 hover:text-blue-800">
+                      Marcelo Arêas
+                    </a>.
+              </p>
+            )}
             <hr className="border-t border-gray-300 mt-2 mb-1.5 max-w-[80%] mx-auto" />
             <ul className="list-disc ml-5 text-gray-600 mt-2 space-y-1 text-left">
-              {language === "en" ? (
-                <>
-                  <li>Grouping government expenditures embeddings based on their similarity score to detect suspicious spending patterns.</li>
-                  <li>Won the national INOVA contest (Telebrasil) for innovative technological solutions.</li>
-                </>
-              ) : (
-                <>
-                  <li>Regroupement des vecteurs de dépenses publiques selon leur score de similarité afin de détecter des schémas de dépenses suspects.</li>
-                  <li>Lauréat du concours national INOVA (Telebrasil) pour des solutions technologiques innovantes.</li>
-                </>
-              )}
-            </ul>
-            </div>
+            {language === "en" ? (
+              <li>Built with React, FastAPI, PostgreSQL, Docker, Nginx, and an external public API integration.</li>
+            ) : (
+              <li>Développée avec React, FastAPI, PostgreSQL, Docker, Nginx et des intégrations d’API externes.</li>
+            )}
+          </ul>
+
+          </div>
 
           {/* Current Research */}
           <div className="p-4 border-l-4 border-green-500 bg-green-50 shadow-sm rounded-md">
-            <h3 className="font-bold mb-2">2025 – Present · Research Paper in Progress</h3>
+            <h3 className="font-bold mb-2">Paper in progress: <i>SCRNA-Seq Analysis</i></h3>
             {language === "en" ? (
               <p className="text-gray-600">
                 Leading a comparative study of clustering algorithms (SDEC, DEC, K-Means, Spectral Clustering) applied to genetic data for cancer prediction. Building ablation pipelines with PCA and scalers to evaluate reproducibility and performance.

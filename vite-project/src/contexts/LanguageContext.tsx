@@ -14,7 +14,7 @@ const translations: Record<Lang, Record<string, any>> = {
     name: "Vinicius Paraizo",
     landing: {
       title: "Vinicius Paraizo",
-      hello: "Hello there ! ",
+      hello: "Hello there! ",
       journey: "My Journey in Computer Science",
     },
     about: { title: "About me" },

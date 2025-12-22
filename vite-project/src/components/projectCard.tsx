@@ -12,6 +12,12 @@ import app2 from "../assets/nemesis/app2.png";
 import app3 from "../assets/nemesis/app3.png";
 import app5 from "../assets/nemesis/app5.png";
 import app7 from "../assets/nemesis/app7.png";
+import fiscaliza1 from "../assets/fiscaliza/fiscaliza1.png"
+import fiscaliza2 from "../assets/fiscaliza/fiscaliza2.png"
+import fiscaliza3 from "../assets/fiscaliza/fiscaliza3.png"
+import fiscaliza4 from "../assets/fiscaliza/fiscaliza4.png"
+import fiscaliza5 from "../assets/fiscaliza/fiscaliza5.png"
+import fiscaliza6 from "../assets/fiscaliza/fiscaliza6.png"
 
 interface ProjectCardProps {
     title: string;
@@ -19,6 +25,10 @@ interface ProjectCardProps {
     tech: string[];
     github: string;
     demo?: string;
+    externalLinks?: Array<{
+        url: string;
+        label: string;
+    }>;
 }
 
 const nemesisImages = [
@@ -32,12 +42,22 @@ const nemesisImages = [
   telebrasil2,
 ];
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tech, github, demo }) => {
+const fiscalizaImages = [
+    fiscaliza1,
+    fiscaliza2,
+    fiscaliza3,
+    fiscaliza4,
+    fiscaliza5,
+    fiscaliza6,
+]
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tech, github, demo, externalLinks }) => {
     const [current, setCurrent] = useState(0); // for photos
     useEffect(() => {
-        if (title !== "Nemesis") return;
+        if (title !== "Nemesis" && title !== "Fiscalizando") return;
+        const images = title === "Nemesis" ? nemesisImages : fiscalizaImages;
         const interval = setInterval(() => {
-        setCurrent((prev) => (prev + 1) % nemesisImages.length);
+        setCurrent((prev) => (prev + 1) % images.length);
         }, 10000); // 10 s
         return () => clearInterval(interval);
     }, [title]);
@@ -84,27 +104,43 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tech, git
                         Demo
                     </a>
                 )}
+                {externalLinks && externalLinks.map((link, index) => (
+                    <a
+                        key={index}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 text-red-600 hover:text-red-800 transition-colors duration-200"
+                        title="Open project details in new tab"
+                    >
+                        {link.label}
+                        <ExternalLink className="w-4 h-4" />
+                    </a>
+                ))}
             </div>
-            {title === "Nemesis" && (
+            {(title === "Nemesis" || title === "Fiscalizando") && (() => {
+                const images = title === "Nemesis" ? nemesisImages : fiscalizaImages;
+                const altText = title === "Nemesis" ? "Nemesis" : "Fiscalizando";
+                return (
                 <>
-                    <div className="relative w-[100%] h-[400px] mx-auto overflow-hidden rounded-2xl shadow-lg mt-4">
+                    <div className="relative w-[100%] h-[450px] mx-auto overflow-hidden rounded-2xl shadow-lg mt-4">
                         <img
-                        src={nemesisImages[current]}
-                        alt={`Nemesis screenshot ${current + 1}`}
+                        src={images[current]}
+                        alt={`${altText} screenshot ${current + 1}`}
                         className="w-full h-full object-cover transition-opacity duration-500"
                         />
 
                         {/* Área clicável direita */}
                         <div
                         className="absolute top-0 right-0 w-1/2 h-full cursor-pointer"
-                        onClick={() => setCurrent((prev) => (prev + 1) % nemesisImages.length)}
+                        onClick={() => setCurrent((prev) => (prev + 1) % images.length)}
                         />
                         {/* Área clicável esquerda (opcional - para voltar) */}
                         <div
                         className="absolute top-0 left-0 w-1/2 h-full cursor-pointer"
                         onClick={() =>
                             setCurrent((prev) =>
-                            prev === 0 ? nemesisImages.length - 1 : prev - 1
+                            prev === 0 ? images.length - 1 : prev - 1
                             )
                         }
                         />
@@ -112,18 +148,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tech, git
 
                     {/* Indicadores */}
                     <div className="flex gap-2 justify-center mt-2">
-                        {nemesisImages.map((_, index) => (
+                        {images.map((_, index) => (
                         <div
                             key={index}
                             onClick={() => setCurrent(index)}
                             className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-                            index === current ? "bg-gray-200" : "bg-gray-400"
+                            index === current ? "bg-gray-300" : "bg-gray-500"
                             }`}
                         />
                         ))}
                     </div>
-                    </>
-            )}
+                </>
+                );
+            })()}
         </div>
     );
 };
