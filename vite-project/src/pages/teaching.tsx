@@ -60,8 +60,8 @@ const Teaching: React.FC = () => {
                             alt="LSTM Tutorial Thumbnail"
                             className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                         />
-                        <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-all duration-300 flex items-center justify-center pointer-events-none">
-                            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-2 text-white text-lg font-semibold">
+                        <div className="absolute inset-0 bg-black md:opacity-0 opacity-70 group-hover:opacity-50 transition-all duration-300 flex items-center justify-center pointer-events-none">
+                            <div className="md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-2 text-white text-lg font-semibold">
                                 <ExternalLink className="w-6 h-6" />
                                 {language === "en" ? "Watch on YouTube" : "Regarder sur YouTube"}
                             </div>

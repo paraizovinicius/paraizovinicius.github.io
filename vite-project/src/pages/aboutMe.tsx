@@ -187,11 +187,11 @@ const AboutMe: React.FC = () => {
                             <div className="text-gray-600 leading-relaxed text-[18px] text-left">
                                 {language === "en" ? (
                                 <>
-                                    Later, I started a career as a Web Developer, where I joined a senior team working with an agile methodology to develop a platform for Hapvida, one of the largest health plan companies in Brazil. In parallel, alongside Prof. Eduardo Bezerra, I developed the project Nemesis, derived from my thesis. That project won first place in a national contest with 44 other participants and was later presented by Prof. Bezerra and me at Painel Telebrasil 2025 in Brazil’s capital city, Brasília.
+                                    Later, I started a career as a Web Developer, where I joined a senior team working with an agile methodology to develop a platform for Hapvida, one of the largest health plan companies in Brazil. In parallel, alongside Prof. Eduardo Bezerra, I developed the project Nemesis, derived from my thesis. That project won first place in a national contest with 44 other participants and was later presented by us at Painel Telebrasil 2025 in Brazil’s capital city, Brasília.
                                 </>
                                 ) : (
                                 <>
-                                    Par la suite, j’ai commencé une carrière de développeur web, rejoignant une équipe senior travaillant en méthodologie agile pour développer une plateforme pour Hapvida, l’une des plus grandes compagnies de santé au Brésil. Parallèlement, avec le Prof. Eduardo Bezerra, j’ai développé le projet Nemesis, dérivé de mon mémoire. Ce projet a remporté la première place dans un concours national avec 44 autres participants et a ensuite été présenté par le Prof. Bezerra et moi au Painel Telebrasil 2025 dans la capitale du Brésil, Brasília.
+                                    Par la suite, j’ai commencé une carrière de développeur web, rejoignant une équipe senior travaillant en méthodologie agile pour développer une plateforme pour Hapvida, l’une des plus grandes compagnies de santé au Brésil. Parallèlement, avec le Prof. Eduardo Bezerra, j’ai développé le projet Nemesis, dérivé de mon mémoire. Ce projet a remporté la première place dans un concours national avec 44 autres participants et a ensuite on l'a présenté au Painel Telebrasil 2025 dans la capitale du pays, Brasília.
                                 </>
                                 )}
                             </div>
