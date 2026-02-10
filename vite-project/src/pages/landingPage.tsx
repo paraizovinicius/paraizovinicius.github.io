@@ -24,7 +24,7 @@ const LandingPage: React.FC = () => {
           I am a Computer Scientist graduated by CEFET/RJ, with a Master's exchange program experience 
           at Aix-Marseille University. My final project thesis is entitled{" "}
           <em>"Audit of Government Spending: An approach using Natural Language Processing"</em>. 
-          You can find the manuscript{" "}
+          You can find the abstract{" "}
           <a
             href={tese}
             target="_blank"
