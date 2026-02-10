@@ -40,7 +40,7 @@ const LandingPage: React.FC = () => {
           l'université d'Aix-marseille.
           Mon mémoire de fin d’études s’intitule{" "}
           <em>"Audit des dépenses publiques : une approche utilisant le traitement automatique du langage naturel"</em>. 
-          Vous pouvez consulter le manuscrit{" "}
+          Vous pouvez consulter l'abstract{" "}
           <a
             href={tese}
             target="_blank"
