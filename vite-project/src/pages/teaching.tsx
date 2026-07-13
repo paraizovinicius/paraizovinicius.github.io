@@ -2,6 +2,7 @@ import React from "react";
 import { ExternalLink } from "lucide-react";
 import thumbnail_lstm from '../assets/thumbnail-LSTM.png'
 import thumbnail_mlp from '../assets/Thumbnail-MLP.png'
+import thumbnail_dec from '../assets/thumbnail-DEC.png'
 import { useLanguage } from "../contexts/LanguageContext";
 
 const Teaching: React.FC = () => {
@@ -11,6 +12,66 @@ const Teaching: React.FC = () => {
         <div className="min-h-screen pl-0 md:pl-22 md:pl-0 mx-auto bg-gray-50 text-gray-800 py-12 px-6 mt-8 md:mt-0">
             <h1 className="text-4xl font-bold mb-8 text-center">Teaching</h1>
             <div className="max-w-4xl mx-auto grid gap-8 md:grid-cols-1 pl-4">
+
+                {/* DEC Video Card */}
+                <div className="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row md:gap-6 mb-4">
+                    <div className="flex-1">
+                        <h2 className="text-2xl font-semibold mb-2">
+                            {language === "en" ? "Deep Embedded Clustering" : "Deep Embedded Clustering"}
+                        </h2>
+                        <div className="text-gray-700 mb-4">
+                            {language === "en" ? (
+                                <div>
+                                    A walkthrough of DEC from the paper to Google Colab:
+                                    <ul className="list-disc pl-6 text-left space-y-2 mt-2">
+                                        <li>Explanation of the mathematical foundations behind DEC and how the model is derived from the original paper.</li>
+                                        <li>Implementation of both DEC and the semi-supervised version, SDEC, in Python classes.</li>
+                                        <li>Use of the MNIST dataset to evaluate the model in practice.</li>
+                                        <li>Performance results reaching 75.33% accuracy for DEC and 87.12% for SDEC.</li>
+                                    </ul>
+                                </div>
+                            ) : (
+                                <div>
+                                    Un pas à pas d'algorithme DEC du papier jusqu'à Google Colab :
+                                    <ul className="list-disc pl-6 text-left space-y-2 mt-2">
+                                        <li>Explication des fondements mathématiques derrière DEC et de la dérivation du modèle à partir de l'article original.</li>
+                                        <li>Implémentation des versions DEC et semi-supervisée SDEC sous forme de classes Python.</li>
+                                        <li>Utilisation du dataset MNIST pour évaluer le modèle en pratique.</li>
+                                        <li>Résultats atteignant 75,33 % d'exactitude pour DEC et 87,12 % pour SDEC.</li>
+                                    </ul>
+                                </div>
+                            )}
+                        </div>
+                        <div className="flex flex-wrap gap-2 mb-4 md:mb-0">
+                            {["Python", "NumPy", "PyTorch", "Deep Learning"].map((tech) => (
+                                <span
+                                    key={tech}
+                                    className="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs font-medium"
+                                >
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                    <a
+                        href="https://www.youtube.com/watch?v=pEKQtiNK7Zo"
+                        rel="noopener noreferrer"
+                        target="_blank" 
+                        className="relative group overflow-hidden rounded-2xl shadow-lg mt-4 md:mt-0 block md:w-64 md:flex-shrink-0 md:self-center"
+                    >
+                        <img
+                            src={thumbnail_dec}
+                            alt="DEC Tutorial Thumbnail"
+                            className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-black md:opacity-0 opacity-70 group-hover:opacity-50 transition-all duration-300 flex items-center justify-center pointer-events-none">
+                            <div className="md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-2 text-white text-lg font-semibold">
+                                <ExternalLink className="w-6 h-6" />
+                                {language === "en" ? "Watch on YouTube" : "Regarder sur YouTube"}
+                            </div>
+                        </div>
+                    </a>
+                </div>
                 
                 {/* LSTM Video Card */}
                 <div className="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row md:gap-6 mb-4">
