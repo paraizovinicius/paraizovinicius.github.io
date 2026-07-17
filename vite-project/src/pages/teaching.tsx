@@ -3,6 +3,7 @@ import { ExternalLink } from "lucide-react";
 import thumbnail_lstm from '../assets/thumbnail-LSTM.png'
 import thumbnail_mlp from '../assets/Thumbnail-MLP.png'
 import thumbnail_dec from '../assets/thumbnail-DEC.png'
+import thumbnail_idec from '../assets/thumbnail-IDEC.png'
 import { useLanguage } from "../contexts/LanguageContext";
 
 const Teaching: React.FC = () => {
@@ -13,6 +14,62 @@ const Teaching: React.FC = () => {
             <h1 className="text-4xl font-bold mb-8 text-center">Teaching</h1>
             <div className="max-w-4xl mx-auto grid gap-8 md:grid-cols-1 pl-4">
 
+                {/* IDEC Video Card */}
+                <div className="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row md:gap-6 mb-4">
+                    <div className="flex-1">
+                        <h2 className="text-2xl font-semibold mb-2">
+                            {language === "en" ? "Improved Deep Embedded Clustering" : "Improved Deep Embedded Clustering"}
+                        </h2>
+                        <div className="text-gray-700 mb-4">
+                            {language === "en" ? (
+                                <div>
+                                    <ul className="list-disc pl-6 text-left space-y-2 mt-2">
+                                        <li>Explanation of IDEC from the paper to the implementation.</li>
+                                        <li>Implementation of IDEC class and its loss function.</li>
+                                        <li>Performance results reaching 84.41% accuracy for IDEC (9% improvement comparing to DEC).</li>
+                                    </ul>
+                                </div>
+                            ) : (
+                                <div>
+                                    <ul className="list-disc pl-6 text-left space-y-2 mt-2">
+                                        <li>Explication des fondements mathématiques derrière IDEC et de la dérivation du modèle à partir de l'article original.</li>
+                                        <li>Implémentation de la classe IDEC et de sa fonction de perte.</li>
+                                        <li>Résultats atteignant 84,41 % d'exactitude pour IDEC (9 % d'amélioration par rapport à DEC).</li>
+                                    </ul>
+                                </div>
+                            )}
+                        </div>
+                        <div className="flex flex-wrap gap-2 mb-4 md:mb-0">
+                            {["Python", "NumPy", "PyTorch", "Deep Learning"].map((tech) => (
+                                <span
+                                    key={tech}
+                                    className="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs font-medium"
+                                >
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                    <a
+                        href="https://youtu.be/bDwUFPMXthE"
+                        rel="noopener noreferrer"
+                        target="_blank" 
+                        className="relative group overflow-hidden rounded-2xl shadow-lg mt-4 md:mt-0 block md:w-64 md:flex-shrink-0 md:self-center"
+                    >
+                        <img
+                            src={thumbnail_idec}
+                            alt="IDEC Tutorial Thumbnail"
+                            className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-black md:opacity-0 opacity-70 group-hover:opacity-50 transition-all duration-300 flex items-center justify-center pointer-events-none">
+                            <div className="md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-2 text-white text-lg font-semibold">
+                                <ExternalLink className="w-6 h-6" />
+                                {language === "en" ? "Watch on YouTube" : "Regarder sur YouTube"}
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
                 {/* DEC Video Card */}
                 <div className="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row md:gap-6 mb-4">
                     <div className="flex-1">
@@ -22,7 +79,6 @@ const Teaching: React.FC = () => {
                         <div className="text-gray-700 mb-4">
                             {language === "en" ? (
                                 <div>
-                                    A walkthrough of DEC from the paper to Google Colab:
                                     <ul className="list-disc pl-6 text-left space-y-2 mt-2">
                                         <li>Explanation of the mathematical foundations behind DEC and how the model is derived from the original paper.</li>
                                         <li>Implementation of both DEC and the semi-supervised version, SDEC, in Python classes.</li>
@@ -32,7 +88,6 @@ const Teaching: React.FC = () => {
                                 </div>
                             ) : (
                                 <div>
-                                    Un pas à pas d'algorithme DEC du papier jusqu'à Google Colab :
                                     <ul className="list-disc pl-6 text-left space-y-2 mt-2">
                                         <li>Explication des fondements mathématiques derrière DEC et de la dérivation du modèle à partir de l'article original.</li>
                                         <li>Implémentation des versions DEC et semi-supervisée SDEC sous forme de classes Python.</li>
@@ -82,7 +137,6 @@ const Teaching: React.FC = () => {
                         <div className="text-gray-700 mb-4">
                             {language === "en" ? (
                                 <div>
-                                    A deep dive into Long Short-Term Memory (LSTM) networks:
                                     <ul className="list-disc pl-6 text-left space-y-2 mt-2">
                                         <li>Detailed explanation of the LSTM cell architecture (forget gate, input gate, output gate).</li>
                                         <li>How Backpropagation Through Time (BPTT) works in recurrent networks.</li>
@@ -92,7 +146,6 @@ const Teaching: React.FC = () => {
                                 </div>
                             ) : (
                                 <div>
-                                    Une exploration approfondie des réseaux Long Short-Term Memory (LSTM) :
                                     <ul className="list-disc pl-6 text-left space-y-2 mt-2">
                                         <li>Explication détaillée de l'architecture d'une cellule LSTM (porte d'oubli, porte d'entrée, porte de sortie).</li>
                                         <li>Fonctionnement de la rétropropagation à travers le temps (BPTT) dans les réseaux récurrents.</li>
@@ -142,7 +195,6 @@ const Teaching: React.FC = () => {
                         <div className="text-gray-700 mb-4">
                             {language === "en" ? (
                                 <div>
-                                    A comprehensive guide to Multi-Layer Perceptron (MLP) classifiers:
                                     <ul className="list-disc pl-6 text-left space-y-2 mt-2">
                                         <li>Detailed explanation of MLP architecture and how neural networks classify data.</li>
                                         <li>Application to the MNIST dataset for handwritten digit recognition.</li>
@@ -153,7 +205,6 @@ const Teaching: React.FC = () => {
                                 </div>
                             ) : (
                                 <div>
-                                    Un guide complet sur les classificateurs Perceptron Multicouche (MLP) :
                                     <ul className="list-disc pl-6 text-left space-y-2 mt-2">
                                         <li>Explication détaillée de l'architecture MLP et comment les réseaux de neurones classifient les données.</li>
                                         <li>Application au dataset MNIST pour la reconnaissance de chiffres manuscrits.</li>
