@@ -198,6 +198,45 @@ const AboutMe: React.FC = () => {
                             </>
                         ),
                     },
+                    {
+                        id: "professional-trajectory",
+                        year: "2026",
+                        content: (
+                            <>
+                            <div className="font-bold text-[20px] text-left">
+                                {language === "en"
+                                ? "Professional trajectory and Research progress"
+                                : "Parcours professionnel et avancées en recherche"}
+                            </div>
+                            <div className="text-gray-600 leading-relaxed text-[18px] text-left">
+                                {language === "en" ? (
+                                <>
+                                    I started my career as an Agentic AI developer at Prime Up. I implemented systems based on multiple reasoning agents, 
+                                    including the design of RAG pipelines with Milvus vector store and the integration of AWS Bedrock APIs for response generation.
+                                </>
+                                ) : (
+                                <>
+                                    J’ai commencé ma carrière en tant que développeur Agentic AI chez Prime Up. J’ai mis en œuvre des systèmes basés sur plusieurs agents de raisonnement,
+                                    y compris la conception de pipelines RAG avec le magasin de vecteurs Milvus et l’intégration des API AWS Bedrock pour la génération de réponses.
+                                </>
+                                )}
+                                <br></br>
+                                <br></br>
+                                {language === "en" ? (
+                                <>
+                                    In parallel, I continued my research in machine learning, focusing on Deep Clustering architectures (DEC, IDEC, BRB) and posting new
+                                    videos to the YouTube channel I created to share my knowledge in this area. 
+                                </>
+                                ) : (
+                                <>
+                                    Parallèlement, j’ai poursuivi mes recherches en apprentissage automatique, en me concentrant sur les architectures de Deep Clustering (DEC, IDEC, BRB) 
+                                    et en publiant de nouvelles vidéos sur la chaîne YouTube que j’ai créée pour partager mes connaissances dans ce domaine.
+                                </>
+                                )}
+                            </div>
+                            </>
+                        ),
+                    },
 
                     ]}
                     />
