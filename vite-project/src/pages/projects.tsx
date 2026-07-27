@@ -8,31 +8,37 @@ const Projects: React.FC = () => {
         <div className="min-h-screen pl-0 md:pl-22 md:pl-0 mx-auto bg-gray-50 text-gray-800 py-12 px-6 mt-8 md:mt-0">
             <h1 className="text-4xl font-bold mb-8 text-center">{t("projects.title")}</h1>
             <div className="max-w-4xl mx-auto grid gap-8 md:grid-cols-1 pl-4">
+
                 <ProjectCard
-                    title={
-                        language === "en"
-                        ? "Government Spending Audit: A Natural Language Processing Approach"
-                        : "Audit des dépenses publiques : une approche par traitement automatique du langage (NLP)"
-                    }
+                    title="MyRestaurant"
                     description={
                         language === "en" ? (
                         <div>
-                            Applied a Deep Embedded Clustering (DEC) algorithm to group public spending 
-                            records of local government (TCE/RJ). Preprocessing included converting 1.4M 
-                            records from CSV to Parquet format and transforming text fields into semantic 
-                            embeddings. Processing involved training an autoencoder for dimensionality 
-                            reduction, followed by DEC clustering. Achieved a silhouette score of 0.9172, 
-                            indicating highly coherent clusters.
+                            Developed a web application for restaurant critiques and rating. Users can publish, like and comment on reviews and rate restaurants. 
+                            <hr className="border-t border-gray-300 mt-2 mb-1.5 max-w-[80%] mx-auto" />
+                            <ul className="list-disc pl-6 text-left space-y-2">
+                                <li>Designed a responsive UI with Angular and Tailwind CSS.</li>
+                                <li>Implemented a database schema for storing restaurant information and reviews.</li>
+                                <li>Implemented user authentication and authorization using Supabase.</li>
+                                <li>Deployed the application on Vercel for seamless access.</li>
+                            </ul>
                         </div>
                         ) : (
                         <div>
-                            Application d’une implémentation de l’algorithme Deep Embedded Clustering (DEC) 
-                            pour regrouper les enregistrements de dépenses publiques du gouvernement local (TCE/RJ). Le prétraitement comprenait la conversion de 1,4 million d’enregistrements de CSV en format Parquet et la transformation des champs textuels en embeddings sémantiques. Le traitement impliquait l’entraînement d’un autoencodeur pour la réduction de dimension, suivi du clustering DEC. Un score de silhouette de 0,9172 a été atteint, indiquant des clusters très cohérents.
+                            Développement d'une application web pour les critiques et les évaluations de restaurants. Les utilisateurs peuvent publier, aimer et commenter des critiques et évaluer des restaurants.
+                            <hr className="border-t border-gray-300 mt-2 mb-1.5 max-w-[80%] mx-auto" />
+                            <ul className="list-disc pl-6 text-left space-y-2">
+                                <li>Conception d'une interface utilisateur réactive avec Angular et Tailwind CSS.</li>
+                                <li>Mise en place d'un schéma de base de données pour stocker les informations sur les restaurants et les critiques.</li>
+                                <li>Implémentation de l'authentification et de l'autorisation des utilisateurs avec Supabase.</li>
+                                <li>Déploiement de l'application sur Vercel pour un accès fluide.</li>
+                            </ul>
                         </div>
                         )
                     }
-                    tech={["Pytorch", "DEC", "NLP", "Streamlit", "LangChain", "Chroma"]}
-                    github="https://github.com/AILAB-CEFET-RJ/tcene"
+                    tech={["Angular", "TypeScript/HTML", "Node.js", "Vercel", "Supabase", "Tailwind CSS"]}
+                    github="https://github.com/paraizovinicius/myrestaurant"
+                    demo="https://myrestaurant-blush.vercel.app/"
                 />
 
                 <ProjectCard
@@ -219,6 +225,33 @@ const Projects: React.FC = () => {
                     }
                     tech={["PyTorch", "SDEC"]}
                     github="https://github.com/paraizovinicius/SCRNA-Seq"
+                />
+
+                <ProjectCard
+                    title={
+                        language === "en"
+                        ? "Government Spending Audit: A Natural Language Processing Approach"
+                        : "Audit des dépenses publiques : une approche par traitement automatique du langage (NLP)"
+                    }
+                    description={
+                        language === "en" ? (
+                        <div>
+                            Applied a Deep Embedded Clustering (DEC) algorithm to group public spending 
+                            records of local government (TCE/RJ). Preprocessing included converting 1.4M 
+                            records from CSV to Parquet format and transforming text fields into semantic 
+                            embeddings. Processing involved training an autoencoder for dimensionality 
+                            reduction, followed by DEC clustering. Achieved a silhouette score of 0.9172, 
+                            indicating highly coherent clusters.
+                        </div>
+                        ) : (
+                        <div>
+                            Application d’une implémentation de l’algorithme Deep Embedded Clustering (DEC) 
+                            pour regrouper les enregistrements de dépenses publiques du gouvernement local (TCE/RJ). Le prétraitement comprenait la conversion de 1,4 million d’enregistrements de CSV en format Parquet et la transformation des champs textuels en embeddings sémantiques. Le traitement impliquait l’entraînement d’un autoencodeur pour la réduction de dimension, suivi du clustering DEC. Un score de silhouette de 0,9172 a été atteint, indiquant des clusters très cohérents.
+                        </div>
+                        )
+                    }
+                    tech={["Pytorch", "DEC", "NLP", "Streamlit", "LangChain", "Chroma"]}
+                    github="https://github.com/AILAB-CEFET-RJ/tcene"
                 />
             </div>
         </div>

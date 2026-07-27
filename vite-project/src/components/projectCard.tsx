@@ -100,8 +100,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tech, git
                         rel="noopener noreferrer"
                         className="flex items-center gap-1 text-gray-600 hover:text-black transition-colors duration-200"
                     >
-                        <ExternalLink size={18} />
                         Demo
+                        <ExternalLink size={18} />
                     </a>
                 )}
                 {externalLinks && externalLinks.map((link, index) => (
