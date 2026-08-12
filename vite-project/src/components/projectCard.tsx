@@ -18,6 +18,10 @@ import fiscaliza3 from "../assets/fiscaliza/fiscaliza3.png"
 import fiscaliza4 from "../assets/fiscaliza/fiscaliza4.png"
 import fiscaliza5 from "../assets/fiscaliza/fiscaliza5.png"
 import fiscaliza6 from "../assets/fiscaliza/fiscaliza6.png"
+import taste1 from "../assets/tastebuddy/taste1.png"
+import taste2 from "../assets/tastebuddy/taste2.png"
+import taste3 from "../assets/tastebuddy/taste3.png"
+import taste4 from "../assets/tastebuddy/taste4.png"
 
 interface ProjectCardProps {
     title: string;
@@ -51,11 +55,19 @@ const fiscalizaImages = [
     fiscaliza6,
 ]
 
+const tastebuddyImages = [
+    taste1,
+    taste2,
+    taste3,
+    taste4,
+    // Add more TasteBuddy images here if available
+];
+
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tech, github, demo, externalLinks }) => {
     const [current, setCurrent] = useState(0); // for photos
     useEffect(() => {
-        if (title !== "Nemesis" && title !== "Fiscalizando") return;
-        const images = title === "Nemesis" ? nemesisImages : fiscalizaImages;
+        if (title !== "Nemesis" && title !== "Fiscalizando" && title !== "TasteBuddy") return;
+        const images = title === "Nemesis" ? nemesisImages : title === "Fiscalizando" ? fiscalizaImages : tastebuddyImages;
         const interval = setInterval(() => {
         setCurrent((prev) => (prev + 1) % images.length);
         }, 10000); // 10 s
@@ -118,16 +130,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tech, git
                     </a>
                 ))}
             </div>
-            {(title === "Nemesis" || title === "Fiscalizando") && (() => {
-                const images = title === "Nemesis" ? nemesisImages : fiscalizaImages;
-                const altText = title === "Nemesis" ? "Nemesis" : "Fiscalizando";
+            {(title === "Nemesis" || title === "Fiscalizando" || title === "TasteBuddy") && (() => {
+                const images = title === "Nemesis" ? nemesisImages : title === "Fiscalizando" ? fiscalizaImages : tastebuddyImages;
+                const altText = title === "Nemesis" ? "Nemesis" : title === "Fiscalizando" ? "Fiscalizando" : "TasteBuddy";
                 return (
                 <>
                     <div className="relative w-[100%] h-[450px] mx-auto overflow-hidden rounded-2xl shadow-lg mt-4">
                         <img
                         src={images[current]}
                         alt={`${altText} screenshot ${current + 1}`}
-                        className="w-full h-full object-cover transition-opacity duration-500"
+                        className="w-full h-full object-contain transition-opacity duration-500"
                         />
 
                         {/* Área clicável direita */}

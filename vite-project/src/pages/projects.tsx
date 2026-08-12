@@ -10,7 +10,7 @@ const Projects: React.FC = () => {
             <div className="max-w-4xl mx-auto grid gap-8 md:grid-cols-1 pl-4">
 
                 <ProjectCard
-                    title="MyRestaurant"
+                    title="TasteBuddy"
                     description={
                         language === "en" ? (
                         <div>
@@ -38,7 +38,7 @@ const Projects: React.FC = () => {
                     }
                     tech={["Angular", "TypeScript/HTML", "Node.js", "Vercel", "Supabase", "Tailwind CSS"]}
                     github="https://github.com/paraizovinicius/myrestaurant"
-                    demo="https://myrestaurant-blush.vercel.app/"
+                    demo="https://tastebuddy-blush.vercel.app/"
                 />
 
                 <ProjectCard
