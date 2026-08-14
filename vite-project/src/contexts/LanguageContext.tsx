@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 
-type Lang = "en" | "fr";
+type Lang = "en" | "fr" | "de";
 
 type LangContextType = {
   language: Lang;
@@ -30,6 +30,17 @@ const translations: Record<Lang, Record<string, any>> = {
     },
     about: { title: "À propos de moi" },
     projects: { title: "Projets" },
+  },
+  de: {
+    nav: { home: "Startseite", about: "Über mich", projects: "Projekte" },
+    name: "Vinicius Paraizo",
+    landing: {
+      title: "Vinicius Paraizo",
+      hello: "Hallo! ",
+      journey: "Meine Reise in der Informatik",
+    },
+    about: { title: "Über mich" },
+    projects: { title: "Projekte" },
   },
 };
 

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
-import { US, FR } from 'country-flag-icons/react/3x2'
+import { US, FR, DE } from 'country-flag-icons/react/3x2'
 import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
@@ -78,7 +78,7 @@ export default function Navbar() {
             window.scrollTo(0, 0);
           }}
         >
-          {language === "en" ? (<>About Me</>) : (<>À propos de moi</>)}
+          {language === "en" ? (<>About Me</>) : (language === "fr" ? (<>À propos de moi</>) : (<>Über mich</>))}
         </span>
 
         <span
@@ -88,7 +88,7 @@ export default function Navbar() {
             window.scrollTo(0, 0);
           }}
         >
-          {language === "en" ? (<>Teaching</>) : (<>Teaching</>)}
+          {language === "en" ? (<>Teaching</>) : (language === "fr" ? (<>Enseignement</>) : (<>Lehre</>))}
         </span>
 
         <span
@@ -98,7 +98,7 @@ export default function Navbar() {
             window.scrollTo(0, 0);
           }}
         >
-          {language === "en" ? (<>Projects</>) : (<>Projets</>)}
+          {language === "en" ? (<>Projects</>) : (language === "fr" ? (<>Projets</>) : (<>Projekte</>))}
         </span>
 
         <div className="flex gap-2 items-center mx-auto">
@@ -115,6 +115,13 @@ export default function Navbar() {
             aria-label="Set French"
           >
             FR <FR title="France" className="mt-1"/>
+          </span>
+          <span
+            className={`text-sm text-white/80 px-2 py-1 rounded hover:underline hover:text-orange-300 cursor-pointer ${language === "de" ? "text-orange font-bold" : ""}`}
+            onClick={() => setLanguage("de")}
+            aria-label="Set German"
+          >
+            DE <DE title="Germany" className="mt-1"/>
           </span>
         </div>
       </div>
@@ -141,7 +148,7 @@ export default function Navbar() {
               setMobileMenuOpen(false);
             }}
           >
-            {language === "en" ? (<>About Me</>) : (<>À propos de moi</>)}
+            {language === "en" ? (<>About Me</>) : (language === "fr" ? (<>À propos de moi</>) : (<>Über mich</>))}
           </span>
 
           <span
@@ -152,7 +159,7 @@ export default function Navbar() {
               setMobileMenuOpen(false);
             }}
           >
-            {language === "en" ? (<>Teaching</>) : (<>Teaching</>)}
+            {language === "en" ? (<>Teaching</>) : (language === "fr" ? (<>Enseignement</>) : (<>Lehre</>))}
           </span>
 
           <span
@@ -163,7 +170,7 @@ export default function Navbar() {
               setMobileMenuOpen(false);
             }}
           >
-            {language === "en" ? (<>Projects</>) : (<>Projets</>)}
+            {language === "en" ? (<>Projects</>) : (language === "fr" ? (<>Projets</>) : (<>Projekte</>))}
           </span>
 
           <div className="flex gap-4 items-center justify-center py-2 border-t border-gray-700 mt-2">
@@ -180,6 +187,13 @@ export default function Navbar() {
               aria-label="Set French"
             >
               FR <FR title="France" className="inline w-6 h-4 ml-1"/>
+            </span>
+            <span
+              className={`text-base text-white/80 px-3 py-2 rounded hover:bg-gray-800 hover:text-orange-300 cursor-pointer transition-colors ${language === "de" ? "text-orange-300 font-bold" : ""}`}
+              onClick={() => setLanguage("de")}
+              aria-label="Set German"
+            >
+              DE <DE title="Germany" className="inline w-6 h-4 ml-1"/>
             </span>
           </div>
         </div>
