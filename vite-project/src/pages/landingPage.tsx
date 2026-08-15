@@ -272,7 +272,7 @@ const LandingPage: React.FC = () => {
                 {c.cvLabel}
               </a>
               <a
-                href="/projects"
+                href="/Projects"
                 className="inline-flex items-center gap-2 rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-800 transition-colors hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
               >
                 {c.projectsLabel}
@@ -341,7 +341,7 @@ const LandingPage: React.FC = () => {
             </ul>
 
             <a
-              href="/projects"
+              href="/Projects"
               className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-blue-700 hover:text-blue-900"
             >
               {c.highlightCta}
