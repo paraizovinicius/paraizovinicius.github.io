@@ -5,6 +5,7 @@ import tese from "../assets/TCC_2024_ViniciusParaizo.pdf";
 import cv from "../assets/CV - Vinicius Paraizo.pdf";
 import cv_de from "../assets/CV - Paraizo [german].pdf";
 import { useLanguage } from "../contexts/LanguageContext";
+import { useNavigate } from "react-router-dom";
 
 type Lang = "en" | "fr" | "de";
 
@@ -228,6 +229,7 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 
 const LandingPage: React.FC = () => {
   const { language } = useLanguage();
+  const navigate = useNavigate();
   const lang = (["en", "fr", "de"].includes(language) ? language : "en") as Lang;
   const c = ui[lang];
   const cvFile = lang === "de" ? cv_de : cv;
@@ -272,8 +274,11 @@ const LandingPage: React.FC = () => {
                 {c.cvLabel}
               </a>
               <a
-                href="/Projects"
                 className="inline-flex items-center gap-2 rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-800 transition-colors hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
+                onClick={() => {
+                  navigate("/Projects");
+                  window.scrollTo(0, 0);
+                }}
               >
                 {c.projectsLabel}
                 <ArrowUpRight className="h-4 w-4" />
@@ -341,8 +346,11 @@ const LandingPage: React.FC = () => {
             </ul>
 
             <a
-              href="/Projects"
               className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-blue-700 hover:text-blue-900"
+              onClick={() => {
+                navigate("/Projects");
+                window.scrollTo(0, 0);
+              }}
             >
               {c.highlightCta}
               <ArrowUpRight className="h-4 w-4" />
