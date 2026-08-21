@@ -1,9 +1,7 @@
 import React from "react";
 import eu from "../assets/eu.png";
-import { Mail, MapPin, FileText, ArrowUpRight } from "lucide-react";
+import { Mail, MapPin, ArrowUpRight } from "lucide-react";
 import tese from "../assets/TCC_2024_ViniciusParaizo.pdf";
-import cv from "../assets/CV - Vinicius Paraizo.pdf";
-import cv_de from "../assets/CV - Paraizo [german].pdf";
 import { useLanguage } from "../contexts/LanguageContext";
 import { useNavigate } from "react-router-dom";
 
@@ -232,7 +230,6 @@ const LandingPage: React.FC = () => {
   const navigate = useNavigate();
   const lang = (["en", "fr", "de"].includes(language) ? language : "en") as Lang;
   const c = ui[lang];
-  const cvFile = lang === "de" ? cv_de : cv;
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800">
@@ -264,7 +261,7 @@ const LandingPage: React.FC = () => {
 
             {/* Actions */}
             <div className="mt-6 text-white flex flex-wrap items-center justify-center md:justify-start gap-3">
-              <a
+              {/* <a
                 href={cvFile}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -272,7 +269,7 @@ const LandingPage: React.FC = () => {
               >
                 <FileText className="h-4 w-4" />
                 {c.cvLabel}
-              </a>
+              </a> */}
               <a
                 className="inline-flex items-center gap-2 rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-800 transition-colors hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
                 onClick={() => {
